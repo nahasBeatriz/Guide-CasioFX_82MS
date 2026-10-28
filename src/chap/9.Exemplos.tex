@@ -1,0 +1,271 @@
+\section{Exemplos Integrados}
+
+Esta seção apresenta exercícios resolvidos do livro \textit{Estatística Fácil}, desenvolvidos passo a passo.
+
+\subsection{Distribuição Binomial}
+
+Um teste de múltipla escolha contém 6 questões, cada uma com 4 alternativas e apenas uma correta ($p = 0{,}25$). Se um candidato responder a todas as questões de forma aleatória (chute), determine a probabilidade de ele acertar exatamente 2 questões.
+
+\subsubsection*{Resolução Manual}
+
+A probabilidade de obter $k$ sucessos em $n$ ensaios independentes em uma Distribuição Binomial é dada por:
+\[
+P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}
+\]
+
+Identificando os parâmetros do problema:
+\begin{itemize}
+    \item Número de questões ($n$) = $6$
+    \item Número de acertos desejado ($k$) = $2$
+    \item Probabilidade de acerto ($p$) = $0{,}25$
+    \item Probabilidade de erro ($1-p$) = $1 - 0{,}25 = 0{,}75$
+\end{itemize}
+
+1. Cálculo da combinação simples $\binom{6}{2}$:
+\[
+\binom{6}{2} = \frac{6!}{2!(6-2)!} = \frac{6 \times 5}{2 \times 1} = 15
+\]
+
+2. Substituição dos valores na fórmula binomial:
+\[
+P(X = 2) = 15 \cdot (0{,}25)^2 \cdot (0{,}75)^{6-2}
+\]
+\[
+P(X = 2) = 15 \cdot 0{,}0625 \cdot (0{,}75)^4 = 15 \cdot 0{,}0625 \cdot 0{,}31640625 \approx 0{,}2966
+\]
+
+\subsubsection*{Resolução na Calculadora}
+
+O cálculo direto de probabilidades binomiais é realizado no modo de cálculo geral \textbf{COMP} (\texttt{MODE 1}), utilizando a tecla dedicada \textbf{nCr} para a combinação e a tecla \textbf{$\wedge$} para as potências.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{4.5cm} p{5.5cm} p{3cm}}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Ativar modo COMP & \texttt{MODE 1} & \textit{Modo Geral} \\
+        Cálculo da combinação $\binom{6}{2}$ & \texttt{6 nCr 2 =} & \texttt{15} \\
+        Cálculo direto de $P(X=2)$ & \texttt{(6 nCr 2) * (0.25 \^{} 2) * (0.75 \^{} ( 6 - 2 )) =} & \texttt{0.296630859} \\ \hline
+    \end{tabular}
+\end{table}
+
+A probabilidade de o candidato acertar exatamente duas questões chutando é de aproximadamente $29{,}66\%$.
+
+\subsection{Variância e Desvio Padrão Amostral}
+
+Considerando a amostra das estaturas (em centímetros) de 5 estudantes: $\{160, 165, 170, 172, 178\}$, determine a variância amostral ($s^2$) e o desvio padrão amostral ($s$).
+
+\subsubsection*{Resolução Manual}
+
+1. Cálculo da média aritmética ($\bar{x}$):
+\[
+\bar{x} = \frac{\sum x_i}{n} = \frac{160 + 165 + 170 + 172 + 178}{5} = \frac{845}{5} = 169 \text{ cm}
+\]
+
+2. Cálculo dos desvios ao quadrado e da soma dos quadrados ($\sum (x_i - \bar{x})^2$):
+\begin{align*}
+(160 - 169)^2 &= (-9)^2 = 81 \\
+(165 - 169)^2 &= (-4)^2 = 16 \\
+(170 - 169)^2 &= (1)^2 = 1 \\
+(172 - 169)^2 &= (3)^2 = 9 \\
+(178 - 169)^2 &= (9)^2 = 81
+\end{align*}
+\[
+\sum_{i=1}^{5} (x_i - \bar{x})^2 = 81 + 16 + 1 + 9 + 81 = 188
+\]
+
+3. Cálculo da variância amostral ($s^2$):
+\[
+s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1} = \frac{188}{5 - 1} = \frac{188}{4} = 47 \text{ cm}^2
+\]
+
+4. Cálculo do desvio padrão amostral ($s$):
+\[
+s = \sqrt{s^2} = \sqrt{47} \approx 6{,}8556 \text{ cm}
+\]
+
+\subsubsection*{Resolução na Calculadora}
+
+Utiliza-se o modo estatístico de uma variável \textbf{SD} (\texttt{MODE 2}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{4.5cm} p{5.5cm} p{3cm}}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Ativar modo SD & \texttt{MODE 2} & \texttt{SD} \\
+        Limpar memória estatística & \texttt{SHIFT CLR 1 =} & \texttt{Stat-Clear} \\
+        Inserir dados & \texttt{160 DT 165 DT 170 DT 172 DT 178 DT} & \texttt{n=5} \\
+        Recuperar Média ($\bar{x}$) & \texttt{SHIFT 2 1 =} & \texttt{169} \\
+        Desvio Padrão Amostral ($s$) & \texttt{SHIFT 2 3 =} & \texttt{6.855654601} \\
+        Variância Amostral ($s^2$) & \texttt{Ans $x^2$ =} & \texttt{47} \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Média e Desvio Padrão com Tabela de Frequências}
+
+A tabela a seguir apresenta a distribuição do número de acertos de 20 candidatos em um teste de conhecimento:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        \hline
+        \textbf{Número de Acertos ($x_i$)} & \textbf{Frequência ($f_i$)} \\ \hline
+        2 & 2 \\
+        4 & 5 \\
+        6 & 8 \\
+        8 & 3 \\
+        10 & 2 \\ \hline
+    \end{tabular}
+    \label{tab:frequencias_exemplo}
+\end{table}
+
+Com base na tabela de frequências apresentada, calcule a média aritmética ($\bar{x}$) e o desvio padrão da distribuição.
+
+\subsubsection*{Resolução Manual}
+
+Como os dados representam o total de candidatos do teste, aplica-se a fórmula populacional para o desvio padrão.
+
+1. Tabela auxiliar para os somatórios ($\sum f_i$, $\sum f_i x_i$ e $\sum f_i x_i^2$):
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+        \hline
+        $x_i$ & $f_i$ & $f_i x_i$ & $x_i^2$ & $f_i x_i^2$ \\ \hline
+        2  & 2  & 4   & 4   & 8   \\
+        4  & 5  & 20  & 16  & 80  \\
+        6  & 8  & 48  & 36  & 288 \\
+        8  & 3  & 24  & 64  & 192 \\
+        10 & 2  & 20  & 100 & 200 \\ \hline
+        \textbf{Total} & \textbf{20} & \textbf{116} & -- & \textbf{768} \\ \hline
+    \end{tabular}
+\end{table}
+
+2. Média aritmética ($\bar{x}$):
+\[
+\bar{x} = \frac{\sum f_i x_i}{\sum f_i} = \frac{116}{20} = 5{,}8
+\]
+
+3. Desvio padrão populacional:
+\[
+s = \sqrt{\frac{\sum f_i x_i^2}{n} - \bar{x}^2} = \sqrt{\frac{768}{20} - (5{,}8)^2}
+\]
+\[
+s= \sqrt{38{,}4 - 33{,}64} = \sqrt{4{,}76} \approx 2{,}1817
+\]
+
+\subsubsection*{Resolução na Calculadora}
+
+No modo \textbf{SD} (\texttt{MODE 2}), os dados agrupados por frequência são digitados utilizando o separador \texttt{;} (obtido por \texttt{SHIFT ,}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{4.5cm} p{5.5cm} p{3cm}}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Ativar modo SD & \texttt{MODE 2} & \texttt{SD} \\
+        Limpar dados estatísticos & \texttt{SHIFT CLR 1 =} & \texttt{Stat-Clear} \\
+        Inserir $x_1=2, f_1=2$ & \texttt{2 ; 2 DT} & \texttt{n=2} \\
+        Inserir $x_2=4, f_2=5$ & \texttt{4 ; 5 DT} & \texttt{n=7} \\
+        Inserir $x_3=6, f_3=8$ & \texttt{6 ; 8 DT} & \texttt{n=15} \\
+        Inserir $x_4=8, f_4=3$ & \texttt{8 ; 3 DT} & \texttt{n=18} \\
+        Inserir $x_5=10, f_5=2$ & \texttt{10 ; 2 DT} & \texttt{n=20} \\
+        Recuperar Média ($\bar{x}$) & \texttt{SHIFT 2 1 =} & \texttt{5.8} \\
+        Desvio Padrão Pop. ($\sigma$) & \texttt{SHIFT 2 2 =} & \texttt{2.181742423} \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Regressão Linear Simples}
+
+Para estudar a relação entre os gastos em publicidade ($x$, em milhares de reais) e o volume de vendas ($y$, em milhares de reais) de uma empresa, foram coletados os seguintes pares de dados referentes a 5 meses:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        \hline
+        \textbf{Publicidade ($x$)} & \textbf{Vendas ($y$)} \\ \hline
+        2 & 4 \\
+        3 & 5 \\
+        5 & 7 \\
+        6 & 8 \\
+        8 & 9 \\ \hline
+    \end{tabular}
+    \label{tab:regressao_exemplo}
+\end{table}
+
+Obtenha a equação da reta de regressão linear simples ($\hat{y} = A + Bx$) e o coeficiente de correlação linear ($r$).
+
+\subsubsection*{Resolução Manual}
+
+1. Tabela auxiliar para os somatórios de regressão ($n = 5$):
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+        \hline
+        $x_i$ & $y_i$ & $x_i^2$ & $y_i^2$ & $x_i y_i$ \\ \hline
+        2 & 4 & 4  & 16 & 8   \\
+        3 & 5 & 9  & 25 & 15  \\
+        5 & 7 & 25 & 49 & 35  \\
+        6 & 8 & 36 & 64 & 48  \\
+        8 & 9 & 64 & 81 & 72  \\ \hline
+        \textbf{24} & \textbf{33} & \textbf{138} & \textbf{235} & \textbf{178} \\ \hline
+    \end{tabular}
+\end{table}
+
+2. Cálculo da inclinação (coeficiente angular $B$):
+\[
+B = \frac{n \sum x_i y_i - \sum x_i \sum y_i}{n \sum x_i^2 - (\sum x_i)^2} = \frac{5(178) - (24)(33)}{5(138) - (24)^2}
+\]
+\[
+B = \frac{890 - 792}{690 - 576} = \frac{98}{114} \approx 0{,}8596
+\]
+
+3. Cálculo do intercepto (coeficiente linear $A$):
+\[
+\bar{x} = \frac{24}{5} = 4{,}8 \quad \text{e} \quad \bar{y} = \frac{33}{5} = 6{,}6
+\]
+\[
+A = \bar{y} - B \bar{x} = 6{,}6 - (0{,}8596 \cdot 4{,}8) = 6{,}6 - 4{,}1261 = 2{,}4739
+\]
+
+A equação da reta de regressão é:
+\[
+\hat{y} = 2{,}4739 + 0{,}8596x
+\]
+
+4. Cálculo do coeficiente de correlação linear ($r$):
+\[
+r = \frac{n \sum x_i y_i - \sum x_i \sum y_i}{\sqrt{\left[ n \sum x_i^2 - (\sum x_i)^2 \right] \left[ n \sum y_i^2 - (\sum y_i)^2 \right]}}
+\]
+\[
+r = \frac{98}{\sqrt{114 \cdot \left[ 5(235) - (33)^2 \right]}} = \frac{98}{\sqrt{114 \cdot (1175 - 1089)}} = \frac{98}{\sqrt{114 \cdot 86}}
+\]
+\[
+r = \frac{98}{\sqrt{9804}} = \frac{98}{99{,}0151} \approx 0{,}9897
+\]
+
+O valor $r \approx 0{,}9897$ indica uma correlação linear positiva muito forte entre o investimento em publicidade e o volume de vendas.
+
+\subsubsection*{Resolução na Calculadora}
+
+A análise de regressão linear exige a ativação do modo \textbf{REG LIN} (\texttt{MODE 3 1}). Os pares de dados $(x, y)$ são informados separando as variáveis por vírgula \texttt{,} e confirmados com \texttt{DT}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{4.5cm} p{5.5cm} p{3cm}}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Ativar Modo REG LIN & \texttt{MODE 3 1} & \texttt{REG} \\
+        Limpar memória estatística & \texttt{SHIFT CLR 1 =} & \texttt{Stat-Clear} \\
+        Inserir par (2, 4) & \texttt{2 , 4 DT} & \texttt{n=1} \\
+        Inserir par (3, 5) & \texttt{3 , 5 DT} & \texttt{n=2} \\
+        Inserir par (5, 7) & \texttt{5 , 7 DT} & \texttt{n=3} \\
+        Inserir par (6, 8) & \texttt{6 , 8 DT} & \texttt{n=4} \\
+        Inserir par (8, 9) & \texttt{8 , 9 DT} & \texttt{n=5} \\
+        Coeficiente $A$ (intercepto) & \texttt{SHIFT 2 1 =} & \texttt{2.473684211} \\
+        Coeficiente $B$ (inclinação) & \texttt{SHIFT 2 2 =} & \texttt{0.859649122} \\
+        Coeficiente de correlação ($r$) & \texttt{SHIFT 2 3 =} & \texttt{0.989749437} \\ \hline
+    \end{tabular}
+\end{table}

@@ -1,0 +1,296 @@
+\section{Erros Comuns e Solução de Problemas}
+
+Durante a utilização da FX-82MS, é comum que estudantes se deparem com
+mensagens de erro ou resultados inesperados, especialmente nas primeiras
+experiências com a calculadora. Compreender as causas desses problemas e
+saber como corrigi-los contribui para um uso mais seguro e eficiente da
+ferramenta \cite{casio2004}.
+
+A FX-82MS sinaliza situações de erro por meio de mensagens exibidas no
+visor. As duas mensagens mais frequentes são \textbf{Math ERROR} e
+\textbf{Syntax ERROR}. Em ambos os casos, pressionar \textbf{AC} limpa
+a mensagem e retorna ao estado de entrada, permitindo revisar e corrigir
+a expressão \cite{casio2004}.
+
+\subsection{Math ERROR}
+
+O Math ERROR ocorre quando a expressão inserida está sintaticamente
+correta, mas produz um resultado que está fora do domínio dos números
+reais ou além da capacidade de representação da calculadora
+\cite{casio2004}. Nessa situação, a calculadora não consegue concluir
+o cálculo e interrompe a operação.
+
+As situações mais comuns que produzem Math ERROR são \cite{casio2004}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Situação} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Raiz quadrada de número negativo & \texttt{$\sqrt{}$ (-) 4 =}     & Math ERROR \\
+        Divisão por zero                 & \texttt{5 / 0 =}               & Math ERROR \\
+        Resultado além do limite         & \texttt{9999999999 x\textsuperscript{2} =} & Math ERROR \\
+        Potência de base negativa com    & \texttt{(-) 8 \^{} 0.5 =}     & Math ERROR \\
+        \quad expoente fracionário       &                                &            \\ \hline
+    \end{tabular}
+\end{table}
+
+A FX-82MS opera exclusivamente no domínio dos números reais e não suporta
+resultados complexos \cite{casio2004}. Qualquer operação cujo resultado
+exija números imaginários, como a raiz quadrada de um valor negativo,
+produzirá Math ERROR independentemente da forma como a expressão foi
+inserida.
+
+Ao encontrar Math ERROR, o procedimento recomendado é \cite{casio2004}:
+
+\begin{enumerate}
+    \item Pressionar \textbf{AC} para limpar a mensagem de erro;
+    \item Rever os valores inseridos, verificando sinais, expoentes e
+    radicandos;
+    \item Reinserir a expressão corrigida e confirmar com \textbf{=}.
+\end{enumerate}
+
+\subsection{Syntax ERROR}
+
+O Syntax ERROR ocorre quando a expressão inserida contém uma estrutura
+inválida, ou seja, quando a sequência de teclas não corresponde a uma
+expressão matematicamente reconhecível pela calculadora \cite{casio2004}.
+Diferentemente do Math ERROR, que envolve o resultado do cálculo, o
+Syntax ERROR é identificado antes mesmo de a operação ser realizada.
+
+As causas mais frequentes são \cite{casio2004}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Situação} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Operador sem operando à esquerda  & \texttt{* 5 =}        & Syntax ERROR \\
+        Uso de vírgula como separador     & \texttt{1,5 + 2 =}    & Syntax ERROR \\
+        Parêntese sem fechamento          & \texttt{( 3 + 4 =}    & Syntax ERROR \\
+        Funções sem argumento             & \texttt{$\sqrt{}$ =}  & Syntax ERROR \\ \hline
+    \end{tabular}
+\end{table}
+
+Ao encontrar Syntax ERROR, pressione \textbf{AC} para limpar o visor.
+Como alternativa, a FX-82MS permite localizar o ponto de erro na expressão
+pressionando as teclas de cursor $\triangleleft$ ou $\triangleright$, que
+posicionam o cursor próximo ao caractere problemático \cite{casio2004}.
+Isso permite corrigir apenas o trecho incorreto sem redigitar a expressão
+inteira.
+
+\subsection{Erros com Números Negativos}
+
+O uso incorreto do sinal negativo é uma das fontes mais frequentes de
+erros na FX-82MS. A calculadora dispõe de duas teclas distintas para
+operações relacionadas a valores negativos, e confundi-las produz
+resultados incorretos ou Syntax ERROR \cite{casio2004}:
+
+\begin{itemize}
+    \item \textbf{(-)} -- tecla de negação, utilizada para inserir um
+    número negativo. Deve ser pressionada \textit{antes} do valor
+    numérico;
+    \item \textbf{-} -- tecla de subtração, utilizada como operador
+    binário entre dois operandos já existentes.
+\end{itemize}
+
+A tabela a seguir ilustra situações de uso correto e incorreto:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{llll}
+        \hline
+        \textbf{Intenção} & \textbf{Entrada correta} & \textbf{Entrada incorreta} & \textbf{Consequência} \\ \hline
+        Inserir $-5$         & \texttt{(-) 5}       & \texttt{- 5}         & Syntax ERROR \\
+        Calcular $10 - (-4)$ & \texttt{10 - (-) 4 =} & \texttt{10 - - 4 =} & Syntax ERROR \\
+        Calcular $(-3)^2$    & \texttt{( (-) 3 ) x\textsuperscript{2} =} & \texttt{(-) 3 x\textsuperscript{2} =} & Resultado incorreto \\ \hline
+    \end{tabular}
+\end{table}
+
+O terceiro caso merece atenção especial: ao calcular a potência de uma
+base negativa, a ausência de parênteses faz com que a calculadora aplique
+a potenciação apenas ao valor 3, atribuindo o sinal negativo ao resultado
+final. Assim, \texttt{(-) 3 x\textsuperscript{2}} é interpretado como
+$-(3^2) = -9$, e não como $(-3)^2 = 9$ \cite{casio2004}. Esse
+comportamento é particularmente relevante no cálculo de desvios ao
+quadrado, em que os resultados devem ser sempre não negativos.
+
+Recomenda-se utilizar parênteses ao redor de qualquer base negativa antes
+de aplicar potenciação ou outras funções, como boa prática para evitar
+ambiguidades na interpretação da expressão \cite{casio2004}.
+
+\subsection{Erros com Parênteses}
+
+O uso inadequado de parênteses é outra fonte comum de erros, pois altera
+a ordem de avaliação das operações e pode produzir tanto Syntax ERROR
+quanto resultados numericamente incorretos sem nenhuma mensagem de erro
+\cite{casio2004}.
+
+Os erros mais frequentes envolvendo parênteses são:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Situação} & \textbf{Entrada} & \textbf{Consequência} \\ \hline
+        Parêntese aberto sem fechamento  & \texttt{( 3 + 4 =}         & Syntax ERROR \\
+        Parêntese fechado sem abertura   & \texttt{3 + 4 ) =}         & Syntax ERROR \\
+        Parênteses na posição errada     & \texttt{3 + 4 / ( 2 * 5 )} & Resultado incorreto \\ \hline
+    \end{tabular}
+\end{table}
+
+Um erro especialmente difícil de identificar é a ausência de parênteses
+em expressões compostas, pois a calculadora aplica a precedência padrão
+sem avisar que o resultado pode diferir da intenção do usuário.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Intenção} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        $\dfrac{2 \cdot 6 + 3 \cdot 7 + 5 \cdot 9}{2 + 3 + 5}$ &
+        \texttt{2*6+3*7+5*9 / 2+3+5 =} & $89{,}5$ (incorreto) \\[6pt]
+        $\dfrac{2 \cdot 6 + 3 \cdot 7 + 5 \cdot 9}{2 + 3 + 5}$ &
+        \texttt{( 2*6+3*7+5*9 ) / ( 2+3+5 ) =} & $7{,}8$ (correto) \\ \hline
+    \end{tabular}
+\end{table}
+
+No primeiro caso, a divisão é aplicada apenas ao último termo antes de
+\texttt{/}, produzindo um resultado completamente distinto do esperado.
+Recomenda-se utilizar parênteses explicitamente em torno do numerador e
+do denominador sempre que uma fração envolver somas ou subtrações
+\cite{casio2004}.
+
+A FX-82MS suporta até 13 níveis de parênteses aninhados
+\cite{casio2004}. Caso esse limite seja excedido, a calculadora exibirá
+Syntax ERROR. Em expressões muito longas, considere decompor o cálculo
+em etapas e utilizar a memória Ans ou as variáveis de armazenamento para
+encadear os resultados intermediários.
+
+\subsection{Resultado em Notação Científica}
+
+A FX-82MS exibe resultados em notação científica quando o valor obtido
+é muito grande ou muito pequeno para ser representado no formato decimal
+padrão dentro dos dez dígitos disponíveis no visor \cite{casio2004}. A
+notação científica expressa o resultado na forma $a \times 10^n$, exibida
+no visor como \texttt{a} seguido de \texttt{$\times$10} e o expoente $n$.
+
+Por exemplo, o resultado de $2^{40}$ é exibido como:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        $2^{40}$           & \texttt{2 \^{} 40 =} & \texttt{1{,}099511628$\times$10$^{12}$} \\ \hline
+    \end{tabular}
+\end{table}
+
+Esse resultado corresponde a $1{,}099511628 \times 10^{12}$, ou seja,
+aproximadamente $1{,}1$ trilhão. A notação científica não indica erro
+nem resultado inesperado — é apenas a forma como a calculadora representa
+valores fora da faixa de exibição decimal \cite{casio2004}.
+
+Para interpretar corretamente um resultado em notação científica,
+identifique a mantissa (o valor exibido antes de \texttt{$\times$10}) e
+o expoente $n$, e desloque a vírgula decimal $|n|$ posições para a
+direita (se $n > 0$) ou para a esquerda (se $n < 0$):
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Exibição no visor} & \textbf{Valor correspondente} & \textbf{Situação} \\ \hline
+        \texttt{1{,}5$\times$10$^{6}$}  & $1{,}500{.}000$      & Resultado muito grande \\
+        \texttt{3{,}2$\times$10$^{-4}$} & $0{,}00032$          & Resultado muito pequeno \\ \hline
+    \end{tabular}
+\end{table}
+
+Quando um resultado intermediário em notação científica for utilizado
+em etapas seguintes, recomenda-se recuperá-lo por meio da tecla
+\textbf{Ans}, preservando a precisão completa armazenada internamente
+pela calculadora, sem necessidade de redigitar o valor \cite{casio2004}.
+
+\subsection{Calculadora no Modo Incorreto}
+
+Um erro frequente e de difícil diagnóstico ocorre quando a calculadora
+está em um modo de operação diferente do necessário para o cálculo em
+questão. Nessa situação, a calculadora pode produzir resultados incorretos
+ou impedir o acesso a determinadas funções, sem exibir qualquer mensagem
+de erro \cite{casio2004}.
+
+Os principais problemas associados ao modo incorreto são:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Modo ativo} & \textbf{Operação tentada} & \textbf{Consequência} \\ \hline
+        SD ou REG & Cálculo aritmético geral     & Resultado pode ser incorreto \\
+        COMP      & Inserção de dados com DT     & Tecla DT não funciona \\
+        REG       & Cálculo de desvio padrão $s_1$/$s_2$ & Grandezas do menu S-VAR divergem \\
+        SD        & Inserção de pares $(x, y)$   & Tecla \texttt{,} não separa par \\ \hline
+    \end{tabular}
+\end{table}
+
+Antes de iniciar qualquer sequência de cálculo, recomenda-se verificar
+o indicador de modo exibido no topo do visor e, se necessário, retornar
+ao modo adequado \cite{casio2004}:
+
+\begin{itemize}
+    \item \textbf{MODE 1} -- retorna ao modo COMP para cálculos gerais;
+    \item \textbf{MODE 2} -- ativa o modo SD para estatística com uma
+    variável;
+    \item \textbf{MODE 3 1} -- ativa o modo REG com regressão linear.
+\end{itemize}
+
+A troca de modo não apaga os valores armazenados nas variáveis nem o
+conteúdo da memória independente, mas descarta os dados inseridos no
+editor estatístico \cite{casio2004}. Por isso, recomenda-se concluir
+ou registrar os resultados antes de alternar entre modos.
+
+\subsection{Como Corrigir uma Expressão}
+
+A FX-82MS oferece mecanismos para corrigir expressões durante ou após
+a digitação, evitando a necessidade de reinserir toda a entrada a cada
+erro \cite{casio2004}.
+
+Durante a digitação, antes de pressionar \textbf{=}, os recursos
+disponíveis são:
+
+\begin{itemize}
+    \item \textbf{DEL} -- apaga o caractere imediatamente à esquerda do
+    cursor;
+    \item $\triangleleft$ e $\triangleright$ -- movem o cursor dentro da
+    expressão, permitindo localizar e corrigir um caractere em posição
+    intermediária sem apagar os demais;
+    \item \textbf{AC} -- apaga toda a expressão e reinicia a entrada. Não
+    apaga o conteúdo de Ans nem das memórias.
+\end{itemize}
+
+Após pressionar \textbf{=} e obter um resultado, a expressão anterior
+pode ser recuperada pressionando $\triangleleft$ ou $\triangleright$,
+que restauram a última entrada no visor para edição \cite{casio2004}.
+Esse recurso é útil para repetir um cálculo com pequenas alterações,
+como variar um único valor em uma fórmula já digitada.
+
+O fluxo recomendado para corrigir uma expressão após a identificação
+de um erro é:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Ação} & \textbf{Tecla} \\ \hline
+        1 & Recuperar a expressão anterior & $\triangleleft$ ou $\triangleright$ \\
+        2 & Mover o cursor até o trecho incorreto & $\triangleleft$ ou $\triangleright$ \\
+        3 & Apagar o caractere incorreto & \texttt{DEL} \\
+        4 & Inserir o valor correto & teclas numéricas ou de função \\
+        5 & Confirmar o cálculo corrigido & \texttt{=} \\ \hline
+    \end{tabular}
+\end{table}
+
+Em expressões longas com múltiplos erros, pode ser mais eficiente
+pressionar \textbf{AC} e reinserir a expressão corrigida do zero,
+especialmente quando os erros estão distribuídos em diferentes posições
+da entrada \cite{casio2004}.

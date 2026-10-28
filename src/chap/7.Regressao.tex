@@ -1,0 +1,309 @@
+\section{Regressão Linear}
+
+A FX-82MS oferece um modo dedicado à análise de regressão estatística,
+denominado Modo REG. Nesse modo, a calculadora recebe pares de dados
+$(x, y)$ e determina automaticamente os coeficientes da reta de regressão
+e o coeficiente de correlação, eliminando a necessidade de calcular essas
+grandezas manualmente \cite{casio2004}.
+
+Para ativar o Modo REG, pressione \textbf{MODE} seguido de \textbf{3}.
+A calculadora exibirá um submenu solicitando o tipo de regressão desejado:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Tecla} & \textbf{Tipo} & \textbf{Modelo} \\ \hline
+        \texttt{1} & LIN & $y = A + Bx$ (linear) \\
+        \texttt{2} & LOG & $y = A + B \ln x$ (logarítmica) \\
+        \texttt{3} & EXP & $y = A e^{Bx}$ (exponencial) \\
+        \texttt{4} & PWR & $y = A x^B$ (potência) \\
+        \texttt{5} & INV & $y = A + B/x$ (inversa) \\
+        \texttt{6} & QUAD & $y = A + Bx + Cx^2$ (quadrática) \\ \hline
+    \end{tabular}
+\end{table}
+
+Este manual aborda exclusivamente a regressão linear simples, selecionada
+pressionando \textbf{1} (LIN) após \textbf{MODE 3}. O visor exibirá o
+indicador \textbf{REG} no topo, confirmando que a calculadora está pronta
+para receber os pares de dados \cite{casio2004}. Recomenda-se limpar os
+dados de sessões anteriores antes de iniciar uma nova entrada, utilizando
+a sequência \textbf{SHIFT} $\to$ \textbf{CLR} $\to$ \textbf{1} (Scl).
+
+\subsection{Inserindo Pares $(x,y)$}
+
+No Modo REG, os dados são inseridos como pares $(x, y)$, separados pela
+tecla \textbf{,} (vírgula) e confirmados com \textbf{DT}. Cada par inserido
+representa uma observação com valor da variável independente $x$ e valor
+da variável dependente $y$ \cite{casio2004}. O visor exibe brevemente o
+número de pares inseridos até o momento, identificado como \textbf{n}.
+
+Para inserir os pares $(1, 3)$, $(2, 5)$ e $(3, 8)$, por exemplo, a
+sequência é:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Visor} \\ \hline
+        Ativar Modo REG LIN & \texttt{MODE 3 1} & REG \\
+        Limpar dados & \texttt{SHIFT CLR 1} & 0 \\
+        Inserir $(1, 3)$ & \texttt{1 , 3 DT} & n = 1 \\
+        Inserir $(2, 5)$ & \texttt{2 , 5 DT} & n = 2 \\
+        Inserir $(3, 8)$ & \texttt{3 , 8 DT} & n = 3 \\ \hline
+    \end{tabular}
+\end{table}
+
+Caso um par tenha sido inserido incorretamente, redigite os valores no
+mesmo formato e pressione \textbf{SHIFT} seguido de \textbf{DT} (função
+\textbf{CD}) para removê-lo \cite{casio2004}. Em seguida, insira o par
+correto normalmente com \textbf{DT}.
+
+Assim como no Modo SD, a FX-82MS não permite visualizar ou navegar pelos
+pares inseridos. Recomenda-se registrar os dados em papel antes da
+inserção, organizando-os em uma tabela com as colunas $x$ e $y$, para
+facilitar a identificação de eventuais erros.
+
+\subsection{Coeficientes $a$ e $b$ da reta}
+
+A reta de regressão linear determinada pela calculadora segue o modelo
+\cite{casio2004}:
+
+\begin{equation}
+    \hat{y} = A + Bx
+\end{equation}
+
+Onde $A$ é o coeficiente linear (intercepto) e $B$ é o coeficiente
+angular (inclinação) da reta. Esses valores são calculados pelo método dos
+mínimos quadrados, que minimiza a soma dos quadrados dos resíduos entre os
+valores observados e os valores estimados pela reta.
+
+As fórmulas utilizadas são:
+
+\begin{equation}
+    B = \frac{n \sum x_i y_i - \sum x_i \sum y_i}{n \sum x_i^2 - \left(\sum x_i\right)^2}
+\end{equation}
+
+\begin{equation}
+    A = \bar{y} - B\bar{x}
+\end{equation}
+
+Após a inserção dos pares, os coeficientes são recuperados pelo menu
+\textbf{S-VAR}, acessado por \textbf{SHIFT} $\to$ \textbf{2}
+\cite{casio2004}. No Modo REG LIN, as grandezas disponíveis no menu são:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Atalho} & \textbf{Grandeza} & \textbf{Significado} \\ \hline
+        \texttt{SHIFT 2 1} & $A$          & Coeficiente linear (intercepto) \\
+        \texttt{SHIFT 2 2} & $B$          & Coeficiente angular (inclinação) \\
+        \texttt{SHIFT 2 3} & $r$          & Coeficiente de correlação \\
+        \texttt{SHIFT 2 4} & $\bar{x}$    & Média dos valores de $x$ \\
+        \texttt{SHIFT 2 5} & $\bar{y}$    & Média dos valores de $y$ \\
+        \texttt{SHIFT 2 6} & $\hat{x}$    & Estimativa de $x$ dado $y$ \\
+        \texttt{SHIFT 2 7} & $\hat{y}$    & Estimativa de $y$ dado $x$ \\
+        \texttt{SHIFT 2 8} & $n$          & Número de pares inseridos \\ \hline
+    \end{tabular}
+\end{table}
+
+Considerando os pares $(1, 3)$, $(2, 5)$ e $(3, 8)$ já inseridos, os
+coeficientes da reta são recuperados pela sequência:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Grandeza} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Coeficiente $A$ & \texttt{SHIFT 2 1 =} & $\approx 0{,}333$ \\
+        Coeficiente $B$ & \texttt{SHIFT 2 2 =} & $\approx 2{,}500$ \\ \hline
+    \end{tabular}
+\end{table}
+
+A reta de regressão obtida é $\hat{y} \approx 0{,}333 + 2{,}500x$,
+indicando que, para cada acréscimo unitário em $x$, o valor estimado de
+$y$ aumenta em aproximadamente 2,5 unidades.
+
+\subsection{Coeficiente de Correlação $r$}
+
+O coeficiente de correlação $r$ é uma medida que expressa a intensidade
+e o sentido da relação linear entre as variáveis $x$ e $y$. Seu valor pertence ao intervalo $[-1, 1]$, e sua
+interpretação segue os seguintes critérios:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ll}
+        \hline
+        \textbf{Valor de $|r|$} & \textbf{Interpretação} \\ \hline
+        $|r| = 1$               & Correlação perfeita \\
+        $0{,}8 \leq |r| < 1$   & Correlação forte \\
+        $0{,}5 \leq |r| < 0{,}8$ & Correlação moderada \\
+        $0 < |r| < 0{,}5$      & Correlação fraca \\
+        $r = 0$                 & Ausência de correlação linear \\ \hline
+    \end{tabular}
+\end{table}
+
+O sinal de $r$ indica o sentido da relação: $r > 0$ corresponde a uma
+relação positiva, na qual $y$ tende a crescer com o aumento de $x$;
+$r < 0$ indica relação negativa, na qual $y$ tende a diminuir quando $x$
+cresce.
+
+A fórmula do coeficiente de correlação é:
+
+\begin{equation}
+    r = \frac{n \sum x_i y_i - \sum x_i \sum y_i}
+             {\sqrt{\left[n \sum x_i^2 - \left(\sum x_i\right)^2\right]
+                    \left[n \sum y_i^2 - \left(\sum y_i\right)^2\right]}}
+\end{equation}
+
+Na FX-82MS, o coeficiente de correlação é calculado automaticamente a
+partir dos pares inseridos e recuperado pelo menu S-VAR
+\cite{casio2004}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Grandeza} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Coeficiente $r$ & \texttt{SHIFT 2 3 =} & $\approx 0{,}998$ \\ \hline
+    \end{tabular}
+\end{table}
+
+Para os pares $(1, 3)$, $(2, 5)$ e $(3, 8)$, o valor $r \approx 0{,}998$
+indica correlação linear positiva muito forte entre as variáveis, sugerindo
+que a reta de regressão representa bem a relação entre os dados.
+
+\subsection{Estimativa de Valores}
+
+Uma das principais aplicações da regressão linear é a estimativa de valores
+não observados. A partir da reta $\hat{y} = A + Bx$ determinada pela
+calculadora, é possível estimar o valor de $y$ para um dado $x$, ou
+determinar o valor de $x$ que corresponderia a um dado $y$.
+
+A FX-82MS realiza essas estimativas diretamente pelo menu S-VAR, sem
+necessidade de substituição manual nos coeficientes \cite{casio2004}. O
+procedimento consiste em inserir o valor conhecido, pressionar
+\textbf{SHIFT} $\to$ \textbf{2} e selecionar a grandeza desejada:
+
+\begin{itemize}
+    \item $\hat{y}$ \textbf{(S-VAR 7)} -- estima o valor de $y$ para um
+    dado $x$, digitado antes de acessar o menu;
+    \item $\hat{x}$ \textbf{(S-VAR 6)} -- estima o valor de $x$ para um
+    dado $y$, digitado antes de acessar o menu.
+\end{itemize}
+
+Considerando a reta obtida com os pares $(1, 3)$, $(2, 5)$ e $(3, 8)$,
+a estimativa de $y$ para $x = 4$ e a estimativa de $x$ para $y = 10$ são
+obtidas pela sequência:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Estimativa de $\hat{y}$ para $x = 4$ & \texttt{4 SHIFT 2 7 =} & $\approx 10{,}333$ \\
+        Estimativa de $\hat{x}$ para $y = 10$ & \texttt{10 SHIFT 2 6 =} & $\approx 3{,}867$ \\ \hline
+    \end{tabular}
+\end{table}
+
+As estimativas devem ser interpretadas com cautela quando o valor de $x$
+ou $y$ estiver fora do intervalo dos dados observados, pois a extrapolação
+pressupõe que a relação linear se mantém além da faixa amostral.
+
+\subsection{Exemplos Práticos}
+
+Esta subseção apresenta aplicações de regressão linear com exemplos
+contextualizados em Probabilidade e Estatística.
+
+\subsubsection*{Exemplo 1 — Reta de regressão e coeficiente de correlação}
+
+Uma pesquisa registrou o número de horas de estudo semanais ($x$) e a
+nota obtida em uma avaliação ($y$) de cinco estudantes:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ll}
+        \hline
+        \textbf{Horas de estudo} ($x$) & \textbf{Nota} ($y$) \\ \hline
+        2 & 4 \\
+        3 & 5 \\
+        5 & 7 \\
+        6 & 8 \\
+        8 & 9 \\ \hline
+    \end{tabular}
+\end{table}
+
+Determine a reta de regressão e o coeficiente de correlação.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Visor} \\ \hline
+        Ativar Modo REG LIN     & \texttt{MODE 3 1}    & REG   \\
+        Limpar dados            & \texttt{SHIFT CLR 1} & 0     \\
+        Inserir $(2, 4)$        & \texttt{2 , 4 DT}    & n = 1 \\
+        Inserir $(3, 5)$        & \texttt{3 , 5 DT}    & n = 2 \\
+        Inserir $(5, 7)$        & \texttt{5 , 7 DT}    & n = 3 \\
+        Inserir $(6, 8)$        & \texttt{6 , 8 DT}    & n = 4 \\
+        Inserir $(8, 9)$        & \texttt{8 , 9 DT}    & n = 5 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Grandeza} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Coeficiente $A$ & \texttt{SHIFT 2 1 =} & $\approx 2{,}600$ \\
+        Coeficiente $B$ & \texttt{SHIFT 2 2 =} & $\approx 0{,}852$ \\
+        Correlação $r$  & \texttt{SHIFT 2 3 =} & $\approx 0{,}993$ \\ \hline
+    \end{tabular}
+\end{table}
+
+A reta de regressão obtida é $\hat{y} \approx 2{,}600 + 0{,}852x$,
+indicando que cada hora adicional de estudo corresponde a um acréscimo
+de aproximadamente 0,85 pontos na nota estimada. O coeficiente de
+correlação $r \approx 0{,}993$ evidencia correlação linear positiva muito
+forte entre as variáveis.
+
+\subsubsection*{Exemplo 2 — Estimativa de valor}
+
+Utilizando a reta obtida no Exemplo~1, estime a nota de um estudante que
+dedica 7 horas de estudo semanais.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Estimativa de $\hat{y}$ para $x = 7$ & \texttt{7 SHIFT 2 7 =} & $\approx 8{,}563$ \\ \hline
+    \end{tabular}
+\end{table}
+
+O modelo estima que um estudante com 7 horas semanais de estudo obtenha
+nota aproximada de 8,6. Como esse valor está dentro do intervalo dos dados
+observados ($x$ entre 2 e 8), a estimativa é considerada uma interpolação
+e pode ser utilizada com maior confiança.
+
+\subsubsection*{Exemplo 3 — Interpretação do coeficiente de correlação}
+
+Considere dois conjuntos de dados com os seguintes coeficientes de
+correlação obtidos após a inserção dos pares no Modo REG LIN:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Conjunto} & \textbf{Coeficiente $r$} & \textbf{Interpretação} \\ \hline
+        A & $r = 0{,}993$ & Correlação linear positiva muito forte \\
+        B & $r = 0{,}312$ & Correlação linear positiva fraca \\ \hline
+    \end{tabular}
+\end{table}
+
+No Conjunto A, a reta de regressão descreve bem o comportamento dos dados,
+e as estimativas produzidas tendem a ser confiáveis. No Conjunto B, a
+correlação fraca indica que a relação linear não explica adequadamente a
+variação de $y$ em função de $x$, e o uso da reta para estimativas deve
+ser feito com cautela \cite{crespo2009}.

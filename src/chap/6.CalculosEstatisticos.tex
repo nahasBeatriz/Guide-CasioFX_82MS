@@ -1,0 +1,369 @@
+\section{Cálculos Estatísticos}
+
+A FX-82MS dispõe de um modo dedicado a cálculos estatísticos com uma
+variável, denominado Modo SD (\textit{Standard Deviation}). Nesse modo, a
+calculadora mantém um editor interno de dados e disponibiliza funções para
+o cálculo automático de média, desvio padrão e outras grandezas derivadas,
+eliminando a necessidade de realizar essas operações manualmente etapa por
+etapa \cite{casio2004}.
+
+Para ativar o Modo SD, pressione \textbf{MODE} seguido de \textbf{2}. O
+visor exibirá o indicador \textbf{SD} no topo, confirmando que a calculadora
+está pronta para receber dados estatísticos \cite{casio2004}. Recomenda-se
+limpar os dados de sessões anteriores antes de iniciar uma nova entrada,
+utilizando a sequência \textbf{SHIFT} $\to$ \textbf{CLR} $\to$ \textbf{1}
+(Scl), que apaga todos os dados do editor sem alterar as demais configurações
+da calculadora.
+
+\subsection{Inserindo e Editando Dados}
+
+No Modo SD, os dados são inseridos um a um por meio da tecla \textbf{DT},
+que corresponde à função secundária da tecla \textbf{M+}. Cada valor deve
+ser digitado e confirmado com \textbf{DT}; o visor exibe brevemente o número
+de elementos inseridos até o momento, identificado no visor como \textbf{n}
+\cite{casio2004}.
+
+Para inserir os valores 4, 7 e 9, por exemplo, a sequência é:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Visor} \\ \hline
+        Ativar Modo SD & \texttt{MODE 2} & SD \\
+        Limpar dados & \texttt{SHIFT CLR 1} & 0 \\
+        Inserir primeiro valor & \texttt{4 DT} & n = 1 \\
+        Inserir segundo valor & \texttt{7 DT} & n = 2 \\
+        Inserir terceiro valor & \texttt{9 DT} & n = 3 \\ \hline
+    \end{tabular}
+\end{table}
+
+Caso um valor tenha sido inserido incorretamente, é possível removê-lo
+sem apagar todo o conjunto. Para excluir uma entrada, redigite o valor
+incorreto e pressione \textbf{SHIFT} seguido de \textbf{DT} (função
+\textbf{CD} -- \textit{Count Down}), que remove a última ocorrência daquele
+valor do editor \cite{casio2004}. Em seguida, insira o valor correto
+normalmente com \textbf{DT}.
+
+É importante observar que a FX-82MS não permite visualizar ou navegar
+pela lista de dados inseridos. Por isso, recomenda-se anotar os valores em
+papel à medida que são inseridos, facilitando a identificação e correção de
+eventuais erros.
+
+\subsection{Média e Soma}
+
+Após a inserção dos dados no Modo SD, a FX-82MS disponibiliza as
+grandezas estatísticas por meio da tecla \textbf{SHIFT} seguida de
+\textbf{2} (função \textbf{S-VAR}), que abre um menu com as variáveis
+estatísticas disponíveis \cite{casio2004}. A média aritmética e as somas
+acumuladas são acessadas por esse menu e exibidas no visor ao confirmar
+com \textbf{=}.
+
+As grandezas relacionadas à média e à soma são \cite{casio2004}:
+
+\begin{itemize}
+    \item $\bar{x}$ \textbf{(S-VAR 1)} -- média aritmética dos valores inseridos,
+    calculada automaticamente pela calculadora como:
+    \begin{equation}
+        \bar{x} = \frac{\sum x_i}{n}
+    \end{equation}
+    \item $\sum x$ \textbf{(S-VAR 4)} -- soma de todos os valores inseridos;
+    \item $\sum x^2$ \textbf{(S-VAR 5)} -- soma dos quadrados de todos os valores inseridos;
+    \item $n$ \textbf{(S-VAR 6)} -- número total de elementos inseridos.
+\end{itemize}
+
+Para recuperar qualquer uma dessas grandezas, pressione \textbf{SHIFT}
+$\to$ \textbf{2} (S-VAR), selecione o número correspondente à grandeza
+desejada e confirme com \textbf{=}. Considerando o conjunto \{4, 7, 9\}
+já inserido:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Grandeza} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Média $\bar{x}$ & \texttt{SHIFT 2 1 =} & 6{,}666\ldots \\
+        Soma $\sum x$ & \texttt{SHIFT 2 4 =} & 20 \\
+        Soma $\sum x^2$ & \texttt{SHIFT 2 5 =} & 146 \\
+        Total $n$ & \texttt{SHIFT 2 6 =} & 3 \\ \hline
+    \end{tabular}
+\end{table}
+
+O valor de $\bar{x}$ retornado pela calculadora é mantido internamente
+com precisão completa, mesmo que o visor exiba uma versão arredondada.
+Ao utilizar o resultado de $\bar{x}$ em cálculos subsequentes por meio
+da tecla \textbf{Ans}, a precisão total é preservada, evitando erros de
+arredondamento acumulado \cite{casio2004}.
+
+\subsection{Desvio Padrão}
+
+O desvio padrão é uma medida de dispersão que indica o quanto os valores
+de um conjunto se afastam, em média, da média aritmética. A FX-82MS calcula
+automaticamente duas versões do desvio padrão no Modo SD, acessíveis pelo
+mesmo menu \textbf{S-VAR} utilizado para a média e as somas
+\cite{casio2004}.
+
+A distinção entre as duas versões está na natureza do conjunto de dados
+analisado: se os dados representam a população completa, utiliza-se o desvio
+padrão populacional; se representam uma amostra extraída de uma população
+maior, utiliza-se o desvio padrão amostral \cite{casio2004}.
+
+\subsubsection{Desvio Padrão Populacional}
+
+O desvio padrão populacional $s x$ considera que os dados inseridos
+representam todos os elementos da população. Sua fórmula é \cite{casio2004}:
+
+\begin{equation}
+    s_1 = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n}}
+\end{equation}
+
+É acessado por meio de \textbf{SHIFT} $\to$ \textbf{2} (S-VAR) $\to$
+\textbf{2}. Considerando o conjunto \{4, 7, 9\}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Grandeza} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Desvio padrão populacional $s_1$ & \texttt{SHIFT 2 2 =} & $\approx 2{,}055$ \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{Desvio Padrão Amostral}
+
+O desvio padrão amostral $s_2$ considera que os dados inseridos representam
+uma amostra da população, aplicando a correção de Bessel no denominador para
+produzir uma estimativa não tendenciosa \cite{casio2004}:
+
+\begin{equation}
+    s_2 = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n - 1}}
+\end{equation}
+
+É acessado por meio de \textbf{SHIFT} $\to$ \textbf{2} (S-VAR) $\to$
+\textbf{3}. Para o mesmo conjunto \{4, 7, 9\}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Grandeza} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Desvio padrão amostral $s_2$ & \texttt{SHIFT 2 3 =} & $\approx 2{,}517$ \\ \hline
+    \end{tabular}
+\end{table}
+
+A diferença entre $s_1$ e $s_2$ é mais pronunciada em conjuntos
+pequenos e tende a diminuir à medida que $n$ cresce. Em contextos acadêmicos,
+o enunciado do problema geralmente indica qual versão utilizar; na ausência
+dessa informação, recomenda-se verificar se os dados representam uma
+população completa ou uma amostra antes de escolher a função adequada.
+
+\subsection{Outras Grandezas Disponíveis}
+
+Além da média e dos desvios padrão apresentados nas seções anteriores, o
+menu S-VAR reúne todas as grandezas calculadas automaticamente pela
+calculadora a partir dos dados inseridos no Modo SD. A tabela a seguir
+apresenta uma visão consolidada das seis grandezas disponíveis, com os
+respectivos atalhos e significados \cite{casio2004}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Atalho} & \textbf{Grandeza} & \textbf{Significado} \\ \hline
+        \texttt{SHIFT 2 1} & $\bar{x}$    & Média aritmética \\
+        \texttt{SHIFT 2 2} & $s_1$        & Desvio padrão populacional \\
+        \texttt{SHIFT 2 3} & $s_2$        & Desvio padrão amostral \\
+        \texttt{SHIFT 2 4} & $\sum x$     & Soma dos valores \\
+        \texttt{SHIFT 2 5} & $\sum x^2$   & Soma dos quadrados dos valores \\
+        \texttt{SHIFT 2 6} & $n$          & Número de elementos \\ \hline
+    \end{tabular}
+\end{table}
+
+Os resultados do menu S-VAR podem ser utilizados diretamente em cálculos
+subsequentes por meio da tecla \textbf{Ans} \cite{casio2004}, permitindo
+derivar grandezas que não constam no menu, como a variância e o coeficiente
+de variação. A variância corresponde ao quadrado do desvio padrão e pode ser
+obtida elevando o resultado retornado pelo menu ao quadrado com a tecla $x^2$:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Recuperar $s_2$ & \texttt{SHIFT 2 3 =}  & valor de $s_2$ \\
+        Variância amostral $s_2^2$ & \texttt{Ans x\textsuperscript{2} =} & $s_2^2$ \\ \hline
+    \end{tabular}
+\end{table}
+
+Para o conjunto \{4, 7, 9\} utilizado nas seções anteriores, o valor
+$s_2 \approx 2{,}517$ resulta em variância amostral $s_2^2 \approx 6{,}333$.
+De modo análogo, a variância populacional obtida a partir de $s_1 \approx 2{,}055$
+é $s_1^2 \approx 4{,}222$.
+
+\subsection{Dados com Frequência}
+
+Quando os dados provêm de uma tabela de frequências ou contêm valores
+repetidos, a FX-82MS permite inserir cada valor acompanhado de sua frequência
+absoluta, evitando a digitação individual de cada ocorrência. Esse recurso é
+especialmente útil em exercícios de Estatística que apresentam os dados já
+resumidos em tabelas \cite{casio2004}.
+
+No Modo SD, a entrada de um valor $x$ com frequência $f$ é realizada pela
+sequência \cite{casio2004}:
+
+\begin{center}
+    \textit{valor} \textbf{;} \textit{frequência} \textbf{DT}
+\end{center}
+
+Onde o separador \textbf{;} é acessado pela tecla correspondente do teclado,
+conforme indicado no painel da calculadora. Ao confirmar com \textbf{DT}, o
+visor exibe o número total acumulado de elementos $n$, já computando a
+frequência informada. Quando a frequência é igual a 1, o separador pode ser
+omitido e o valor inserido diretamente com \textbf{DT}.
+
+Considere o conjunto de tempos de atendimento \{2, 4, 4, 4, 5, 5, 7, 9\}, cujos valores repetidos tornam a
+entrada por frequência vantajosa. Sua tabela de frequências é:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ll}
+        \hline
+        \textbf{Valor} ($x_i$) & \textbf{Frequência} ($f_i$) \\ \hline
+        2 & 1 \\
+        4 & 3 \\
+        5 & 2 \\
+        7 & 1 \\
+        9 & 1 \\ \hline
+    \end{tabular}
+\end{table}
+
+A inserção com frequência reduz o número de entradas de 8 para 5:
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Visor} \\ \hline
+        Ativar Modo SD      & \texttt{MODE 2}       & SD    \\
+        Limpar dados        & \texttt{SHIFT CLR 1}  & 0     \\
+        Valor 2, freq.\ 1  & \texttt{2 DT}         & n = 1 \\
+        Valor 4, freq.\ 3  & \texttt{4 ; 3 DT}     & n = 4 \\
+        Valor 5, freq.\ 2  & \texttt{5 ; 2 DT}     & n = 6 \\
+        Valor 7, freq.\ 1  & \texttt{7 DT}         & n = 7 \\
+        Valor 9, freq.\ 1  & \texttt{9 DT}         & n = 8 \\ \hline
+    \end{tabular}
+\end{table}
+
+Após a inserção, as grandezas estatísticas são recuperadas normalmente pelo
+menu S-VAR, com $n = 8$ elementos computados de acordo com as frequências
+informadas. O conjunto inserido por frequência é equivalente, para fins de
+cálculo, à inserção individual de todos os elementos \cite{casio2004}.
+
+Para remover uma entrada inserida com frequência incorreta, redigite o valor
+e a frequência no mesmo formato e pressione \textbf{SHIFT} seguido de
+\textbf{DT} (função \textbf{CD}).
+
+\subsection{Exemplos Práticos}
+
+Esta subseção apresenta aplicações de cálculos estatísticos com
+exemplos contextualizados em Probabilidade e Estatística.
+
+\subsubsection*{Exemplo 1 — Distribuição Binomial}
+
+Em um processo de fabricação, a probabilidade de uma peça apresentar defeito é $p = 0{,}2$ ($20\%$). Se $5$ peças forem selecionadas aleatoriamente, calcule a probabilidade de exatamente $2$ peças serem defeituosas ($k = 2$).
+
+A probabilidade em uma Distribuição Binomial é calculada pela fórmula:
+
+\begin{equation}
+    P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}
+\end{equation}
+
+Para $n = 5$, $k = 2$, $p = 0{,}2$ e $(1-p) = 0{,}8$:
+
+\begin{equation}
+    P(X = 2) = \binom{5}{2} \cdot (0{,}2)^2 \cdot (0{,}8)^{5-2} = 10 \cdot 0{,}04 \cdot 0{,}512 = 0{,}2048
+\end{equation}
+
+Como o cálculo de probabilidades da distribuição binomial utiliza operações aritméticas diretas e a combinação simples ($nCr$), certifique-se de retornar ao modo de cálculo geral \textbf{COMP} (\texttt{MODE 1}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Retornar ao modo COMP & \texttt{MODE 1} & \textit{Modo Padrão} \\
+        Cálculo direto de $P(X=2)$ & \texttt{5 nCr 2 * 0.2 \^{} 2 * 0.8 \^{} ( 5 - 2 ) =} & \texttt{0.2048} \\ \hline
+    \end{tabular}
+\end{table}
+
+A probabilidade de encontrar exatamente 2 peças defeituosas na amostra é de $20{,}48\%$. O uso de parênteses no expoente composto garante a correta ordem das operações.
+
+\subsubsection*{Exemplo 2 — Média e desvio padrão com tabela de frequências}
+
+As notas de uma turma de 20 alunos em uma avaliação de Estatística estão
+resumidas na tabela a seguir. Calcule a média e o desvio padrão populacional
+utilizando o Modo SD com entrada por frequência.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ll}
+        \hline
+        \textbf{Nota} ($x_i$) & \textbf{Frequência} ($f_i$) \\ \hline
+        5 & 2 \\
+        6 & 4 \\
+        7 & 8 \\
+        8 & 4 \\
+        9 & 2 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Visor} \\ \hline
+        Ativar Modo SD & \texttt{MODE 2} & SD \\
+        Limpar dados & \texttt{SHIFT CLR 1} & 0 \\
+        Nota 5, freq.\ 2 & \texttt{5 ; 2 DT} & n = 2 \\
+        Nota 6, freq.\ 4 & \texttt{6 ; 4 DT} & n = 6 \\
+        Nota 7, freq.\ 8  & \texttt{7 ; 8 DT} & n = 14 \\
+        Nota 8, freq.\ 4 & \texttt{8 ; 4 DT} & n = 18 \\
+        Nota 9, freq.\ 2 & \texttt{9 ; 2 DT} & n = 20 \\
+        Média $\bar{x}$ & \texttt{SHIFT 2 1 =} & 7 \\
+        Desvio padrão populacional $s$ & \texttt{SHIFT 2 2 =} & $\approx 1{,}095$ \\ \hline
+    \end{tabular}
+\end{table}
+
+O resultado $\bar{x} = 7$ pode ser verificado pelo cálculo da média ponderada
+pelas frequências:
+%
+\begin{equation}
+    \bar{x} = \frac{5 \cdot 2 + 6 \cdot 4 + 7 \cdot 8 + 8 \cdot 4 + 9 \cdot 2}{20} = \frac{140}{20} = 7
+\end{equation}
+
+Como os dados representam toda a turma, utiliza-se o desvio padrão
+populacional $s_1$.
+
+\subsubsection*{Exemplo 3 — Coeficiente de variação a partir do Modo SD}
+
+Utilizando os resultados obtidos no Exemplo~1 ($\bar{x} = 7$ e
+$s \approx 1{,}414$), calcule o coeficiente de variação. Armazena-se a
+média em uma variável para reutilização no cálculo:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
+        Recuperar $\bar{x}$ & \texttt{SHIFT 2 1 =} & 7 \\
+        Armazenar em A & \texttt{STO ALPHA A} & 7 \\
+        Recuperar $s$ & \texttt{SHIFT 2 3 =} & $\approx 1{,}414$ \\
+        Coeficiente de variação & \texttt{Ans / RCL ALPHA A * 100 =}  & $\approx 20{,}2$ \\ \hline
+    \end{tabular}
+\end{table}
+
+O resultado corresponde à fórmula:
+%
+\begin{equation}
+    CV = \frac{s}{\bar{x}} \times 100 = \frac{1{,}414}{7} \times 100 \approx 20{,}2\%
+\end{equation}

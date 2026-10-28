@@ -1,0 +1,229 @@
+\section{Operações Básicas}
+
+A FX-82MS permite realizar as operações aritméticas fundamentais de forma direta, seguindo as regras de precedência matemática. O domínio dessas operações constitui uma etapa importante para a utilização posterior dos recursos estatísticos da calculadora, uma vez que muitos procedimentos envolvem a combinação de adições, subtrações, multiplicações, divisões e parênteses. Todos os exemplos desta seção assumem que a calculadora está no modo \textbf{COMP}, utilizado para cálculos gerais \cite{casio2004}.
+
+\subsection{Operações Aritméticas}
+
+As operações de adição, subtração, multiplicação e divisão são realizadas 
+com as teclas \textbf{+}, \textbf{-}, \textbf{$\times$} e \textbf{$\div$}, 
+respectivamente. A expressão é confirmada e calculada ao pressionar 
+\textbf{=}.
+
+Exemplo: calcular a média aritmética simples de três notas, operação 
+fundamental em Probabilidade e Estatística. Dada a 
+fórmula:
+
+\begin{equation}
+    \bar{x} = \frac{x_1 + x_2 + x_3}{n} = \frac{7 + 8 + 9}{3} = 8
+\end{equation}
+
+Na calculadora, a sequência de teclas é:
+
+\begin{center}
+\begin{tabular}{ll}
+    \hline
+    \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    \texttt{( 7 + 8 + 9 ) / 3 =} & \texttt{8} \\
+    \hline
+\end{tabular}
+\end{center}
+
+\subsection{Números Negativos}
+
+Números negativos são inseridos com a tecla \textbf{(-)}, localizada 
+próxima à tecla \textbf{=}. Ela deve ser pressionada \emph{antes} do 
+valor numérico, e não deve ser confundida com a tecla de subtração 
+\textbf{-}, que opera entre dois operandos já existentes.
+
+\begin{center}
+\begin{tabular}{lll}
+    \hline
+    \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    $-5 + 3$ & \texttt{(-) 5 + 3 =} & \texttt{-2} \\
+    $10 - (-4)$ & \texttt{10 - (-) 4 =}  & \texttt{14} \\
+    $(-3) \times (-2)$ & \texttt{(-) 3 * (-) 2 =} & \texttt{6}  \\
+    \hline
+\end{tabular}
+\end{center}
+
+Utilizar a tecla \textbf{-} no lugar de \textbf{(-)} para introduzir um 
+número negativo resultará em erro de sintaxe ou em cálculo incorreto, 
+pois a calculadora interpretará o sinal como uma subtração sem operando 
+à esquerda.
+
+\subsection{Números Decimais}
+
+A separação entre parte inteira e parte decimal é feita com a tecla 
+\textbf{.} (ponto), independentemente da convenção regional de vírgula 
+adotada no Brasil. Não há suporte para entrada com vírgula 
+— seu uso causará erro de sintaxe.
+
+\begin{center}
+\begin{tabular}{lll}
+    \hline
+    \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    $1{,}5 + 2{,}3$ & \texttt{1.5 + 2.3 =} & \texttt{3.8} \\
+    $7 \div 4$ & \texttt{7 / 4 =} & \texttt{1.75} \\
+    $0{,}1 \times 0{,}2$ & \texttt{0.1 * 0.2 =} & \texttt{0.02} \\
+    \hline
+\end{tabular}
+\end{center}
+
+A FX-82MS exibe até dez dígitos significativos. Resultados com mais 
+casas decimais são arredondados na exibição, mas o valor completo é 
+mantido internamente e utilizado nos cálculos subsequentes via 
+\textbf{Ans}, preservando a precisão \cite{casio2004}.
+
+\subsection{Ordem de Operações e Parênteses}
+
+A FX-82MS segue a ordem de precedência matemática padrão, conhecida 
+pela hierarquia: potenciação, multiplicação e divisão, adição e subtração 
+. Operações de mesma precedência são avaliadas da 
+esquerda para a direita.
+
+O uso de parênteses permite sobrescrever essa ordem, forçando a avaliação 
+de uma subexpressão antes das demais. A calculadora suporta até 13 níveis 
+de parênteses aninhados \cite{casio2004}.
+
+Considere o exemplo abaixo, onde a ausência de parênteses altera 
+completamente o resultado:
+
+\begin{center}
+\begin{tabular}{lll}
+    \hline
+    \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    $2 + 3 \times 4$ & \texttt{2 + 3 * 4 =} & \texttt{14} \\
+    $(2 + 3) \times 4$ & \texttt{( 2 + 3 ) * 4 =} & \texttt{20} \\
+    \hline
+\end{tabular}
+\end{center}
+
+No primeiro caso, a multiplicação é resolvida antes da adição. No segundo, 
+os parênteses forçam a adição primeiro. Recomenda-se sempre utilizar 
+parênteses em expressões compostas, mesmo quando a precedência já 
+garante o resultado correto, como boa prática de verificação.
+
+\subsection{Correção de Entradas}
+
+A FX-82MS oferece dois mecanismos de correção durante a digitação de uma 
+expressão \cite{casio2004}:
+
+\begin{itemize}
+    \item \textbf{DEL} -- apaga o último caractere inserido na expressão, 
+    permitindo corrigir erros pontuais sem reinserir toda a entrada. Pode 
+    ser pressionada repetidamente para apagar vários caracteres;
+    \item \textbf{AC} -- limpa completamente a expressão atual e o 
+    resultado exibido no visor, reiniciando a entrada do zero. Não apaga 
+    valores armazenados na memória independente \textbf{M} nem o conteúdo 
+    da memória \textbf{Ans}.
+\end{itemize}
+
+Adicionalmente, as teclas de cursor \textbf{$\triangleleft$} e 
+\textbf{$\triangleright$} permitem mover o cursor dentro da expressão 
+digitada para corrigir um caractere em posição intermediária, sem apagar 
+os demais.
+
+\subsection{Reutilização do Resultado Anterior}
+
+A memória \textbf{Ans} armazena automaticamente o resultado de cada 
+cálculo realizado e pode ser recuperada pela tecla \textbf{Ans} 
+\cite{casio2004}. Esse valor é atualizado a cada novo cálculo confirmado 
+com \textbf{=} e persiste mesmo após pressionar \textbf{AC}.
+
+O recurso é especialmente útil em cálculos encadeados, eliminando a 
+necessidade de redigitar resultados intermediários e reduzindo a chance 
+de erros de transcrição. Por exemplo, para calcular o desvio de cada nota 
+em relação à média previamente obtida:
+
+\begin{center}
+\begin{tabular}{lll}
+    \hline
+    \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    Calcular a média & \texttt{( 7 + 8 + 9 ) / 3 =} & \texttt{8} \\
+    Desvio da nota 9 & \texttt{9 - Ans =} & \texttt{1} \\
+    Desvio da nota 7 & \texttt{7 - Ans =} & \texttt{-1} \\
+    \hline
+\end{tabular}
+\end{center}
+
+Importante: ao iniciar uma nova expressão pressionando diretamente 
+\textbf{+}, \textbf{-}, \textbf{$\times$} ou \textbf{$\div$} logo após 
+um resultado, a calculadora insere \textbf{Ans} automaticamente como 
+primeiro operando, sem necessidade de pressionar a tecla explicitamente.
+
+\subsection{Exemplos Práticos}
+
+Esta subseção apresenta aplicações de operações aritméticas básicas com
+exemplos contextualizados em Probabilidade e Estatística.
+
+\subsubsection*{Exemplo 1 — Amplitude de um Conjunto de Dados}
+
+A amplitude total é a diferença entre o maior e o menor valor de um
+conjunto, e representa uma medida simples de dispersão. Dado o conjunto
+de notas $\{4, 6, 7, 8, 9\}$:
+
+\begin{equation}
+    AT = x_{\max} - x_{\min} = 9 - 4 = 5
+\end{equation}
+
+\begin{center}
+\begin{tabular}{lll}
+    \hline
+    \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    $x_{\max} - x_{\min}$ & \texttt{9 - 4 =} & \texttt{5} \\
+    \hline
+\end{tabular}
+\end{center}
+
+A amplitude indica que as notas variam em 5 pontos. Apesar de simples,
+é frequentemente o primeiro passo antes de construir tabelas de
+frequência.
+
+\subsubsection*{Exemplo 2 — Média Ponderada}
+
+Em avaliações com pesos distintos, a média ponderada é:
+
+\begin{equation}
+    \bar{x} = \frac{w_1 x_1 + w_2 x_2 + w_3 x_3}{w_1 + w_2 + w_3}
+    = \frac{2 \cdot 6 + 3 \cdot 7 + 5 \cdot 9}{2 + 3 + 5}
+\end{equation}
+
+\begin{center}
+\begin{tabular}{lll}
+    \hline
+    \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    Numerador & \texttt{( 2 * 6 + 3 * 7 + 5 * 9 ) =} & \texttt{78} \\
+    Denominador & \texttt{Ans / ( 2 + 3 + 5 ) =} & \texttt{7.8} \\
+    \hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Exemplo 3 — Frequência relativa}
+
+A frequência relativa expressa a proporção de cada valor em relação ao
+total de observações, e é calculada dividindo a frequência absoluta pelo
+total:
+
+\begin{equation}
+    fr_i = \frac{n_i}{n} \times 100
+\end{equation}
+
+Em uma turma de $30$ alunos, $12$ obtiveram nota entre $7{,}0$ e
+$10{,}0$. A frequência relativa desse grupo é:
+
+\begin{center}
+\begin{tabular}{lll}
+    \hline
+    \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    $\dfrac{12}{30} \times 100$ & \texttt{12 / 30 * 100 =} & \texttt{40} \\
+    \hline
+\end{tabular}
+\end{center}
