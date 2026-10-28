@@ -1,0 +1,33 @@
+# Ficheiros temporários e de compilação do LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*-blx.bib
+
+# Ficheiros temporários do TeXstudio e de outros editores
+*.bak
+*.sav
+*.te~
+.texstudio*
+
+# Ficheiros do sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ficheiros de ambiente de desenvolvimento/IDE
+.vscode/
+.idea/
