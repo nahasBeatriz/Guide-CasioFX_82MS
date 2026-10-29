@@ -36,8 +36,8 @@ Certifique-se de ter uma distribuição LaTeX instalada em seu sistema:
 
 1. Clone o repositório:
    ```
-     git clone [https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)
-     cd SEU-REPOSITORIO/src
+     git clone https://github.com/nahasBeatriz/Guide-CasioFX_82MS.git
+     cd Guide-CasioFX_82MS/src
    ```
   
 2. Compile o arquivo principal via linha de comando ou pela sua IDE de preferência:
