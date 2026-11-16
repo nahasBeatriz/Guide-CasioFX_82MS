@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper, openany]{book}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0pt]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{imakeidx}
+\usepackage{tcolorbox}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage[alf]{abntex2cite}
+
+\onehalfspacing
+\makeindex[options=-s makeindex.ist]
+
+\title{\textbf{Guia de Uso Básico da Calculadora Científica Casio FX-82MS}}
+\author{Beatriz Regina Nahas}
+\date{Última atualização em \today}
+
+\begin{document}
+
+\frontmatter
+
+\thispagestyle{empty}
+\newpage
+
+\newgeometry{left=3cm, right=2cm, top=3cm, bottom=2cm}
+
+\maketitle
+\tableofcontents
+
+\input{chap/Resumo}
+
+\mainmatter 
+
+\input{chap/1.Introducao}
+\input{chap/2.ConhecendoCalculadora}
+\input{chap/3.OperacoesBasicas}
+\input{chap/4.PotenciasRaizes}
+\input{chap/5.Memoria}
+\input{chap/6.CalculosEstatisticos}
+\input{chap/7.Regressao}
+\input{chap/8.Erros}
+\input{chap/9.Exemplos}
+
+\printindex
+
+\newpage
+\bibliographystyle{abntex2-alf}
+\bibliography{referencias}
+
+\end{document}
