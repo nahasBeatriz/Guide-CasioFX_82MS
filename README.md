@@ -1,16 +1,16 @@
-# Manual de Uso da Calculadora Casio fx-82MS
+# Guia de Uso da Calculadora Casio fx-82MS
 
-Este repositório contém o código-fonte em LaTeX e o PDF final compilado do **Manual de Uso da Calculadora Científica Casio fx-82MS**. O documento foi estruturado seguindo o padrão de publicação da Sociedade Brasileira de Computação (SBC).
+Este repositório contém o código-fonte em LaTeX e o PDF final compilado do **Guia de Uso da Calculadora Científica Casio fx-82MS**.
 
 ## Download do Manual (PDF)
 
 Você pode baixar a versão pronta para leitura diretamente no link abaixo:
 
-*  **pdf/Manual_Calculadora_FX82MS.pdf**
+*  **pdf/Guia_Calculadora_FX82MS.pdf**
 
-## Conteúdo do Manual
+## Conteúdo do Guia
 
-O manual abrange desde o uso básico até operações estatísticas avançadas da calculadora:
+O guia abrange desde o uso básico até operações estatísticas avançadas da calculadora:
 
 1. **Introdução**
 2. **Conhecendo a Calculadora**
