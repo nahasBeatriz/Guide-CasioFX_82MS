@@ -1,38 +1,24 @@
-\section{Memória e Armazenamento de Valores}
+\chapter{Memória e Armazenamento de Valores}
 
-A FX-82MS dispõe de recursos de memória que permitem armazenar e recuperar
-valores intermediários durante a realização de cálculos. O uso adequado desses
-recursos evita a necessidade de redigitar resultados obtidos em etapas anteriores,
-reduzindo a possibilidade de erros de transcrição e tornando o processo de cálculo
-mais eficiente. A calculadora oferece dois tipos principais de armazenamento: a
-memória independente e as variáveis de A a F, M, X e Y \cite{casio2004}.
+A Casio FX-82MS dispõe de recursos de memória que permitem armazenar e recuperar valores intermediários durante a realização de cálculos. O uso adequado desses recursos evita a necessidade de redigitar resultados obtidos em etapas anteriores, reduzindo a possibilidade de erros de transcrição e tornando o processo de cálculo mais eficiente. A calculadora oferece dois tipos principais de armazenamento: a memória independente e as variáveis de A a F, M, X e Y \cite{casio2004}.
 
-\subsection{Memória Independente}
+\section{Memória Independente}
 
-A memória independente, identificada pela letra \textbf{M} no visor, permite
-acumular valores ao longo de uma sequência de cálculos. Ela é gerenciada por
-meio de três operações principais \cite{casio2004}:
+A memória independente, identificada pela letra M no visor, permite acumular valores ao longo de uma sequência de cálculos. Ela é gerenciada por meio de três operações principais \cite{casio2004}:
 
 \begin{itemize}
-    \item \textbf{M+} -- adiciona o resultado atual ao valor armazenado em M;
-    \item \textbf{SHIFT} seguido de \textbf{M+} (função \textbf{M$-$}) -- subtrai o resultado atual do valor armazenado em M;
-    \item \textbf{RCL} seguido de \textbf{M+} -- recupera o valor armazenado em M e o exibe no visor.
+    \item \textbf{M+}: adiciona o resultado atual ao valor armazenado em M;
+    \item \textbf{SHIFT} seguido de \textbf{M+} (função \textbf{M$-$}): subtrai o resultado atual do valor armazenado em M;
+    \item \textbf{RCL} seguido de \textbf{M+}: recupera o valor armazenado em M e o exibe no visor.
 \end{itemize}
 
-O indicador \textbf{M} aparece no topo do visor sempre que há um valor diferente
-de zero armazenado na memória independente. Para zerar a memória M sem apagar
-as demais configurações, armazene o valor zero com a sequência
-\textbf{0} $\to$ \textbf{M+}, ou utilize \textbf{SHIFT} $\to$ \textbf{CLR} $\to$
-\textbf{1} (Mcl), que limpa todas as memórias simultaneamente
-\cite{casio2004}.
+O indicador M aparece no topo do visor sempre que há um valor diferente de zero armazenado na memória independente. Para zerar a memória M sem apagar as demais configurações, armazene o valor zero com a sequência 0 $\to$ M+, ou utilize SHIFT $\to$ CLR $\to$ 1 (Mcl), que limpa todas as memórias simultaneamente \cite{casio2004}.
 
-Uma aplicação direta da memória independente é o cálculo de somas acumuladas,
-como a soma dos quadrados dos desvios utilizada no cálculo da variância. Dadas as
-notas 6, 7 e 8, com média $\bar{x} = 7$:
+Uma aplicação direta da memória independente é o cálculo de somas acumuladas, como a soma dos quadrados dos desvios utilizada no cálculo da variância. Dadas as notas 6, 7 e 8, com média $\bar{x} = 7$:
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{lll}
+    \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
             Zerar a memória & \texttt{0 M+} & M = 0 \\
@@ -44,47 +30,26 @@ notas 6, 7 e 8, com média $\bar{x} = 7$:
         \end{tabular}
 \end{table}
 
-O valor acumulado em M permanece armazenado mesmo após pressionar \textbf{AC}
-ou desligar a calculadora, o que exige atenção: recomenda-se sempre zerar a
-memória independente antes de iniciar um novo cálculo que faça uso de M+,
-evitando que valores residuais de operações anteriores interfiram no resultado.
+O valor acumulado em M permanece armazenado mesmo após pressionar AC ou desligar a calculadora, o que exige atenção: recomenda-se sempre zerar a memória independente antes de iniciar um novo cálculo que faça uso de M+, evitando que valores residuais de operações anteriores interfiram no resultado.
 
-\subsection{Variáveis de Armazenamento}
+\section{Variáveis de Armazenamento}
 
-Além da memória independente, a FX-82MS disponibiliza oito variáveis de
-armazenamento identificadas pelas letras \textbf{A}, \textbf{B}, \textbf{C},
-\textbf{D}, \textbf{E}, \textbf{F}, \textbf{X} e \textbf{Y}, além da variável
-\textbf{M}, compartilhada com a memória independente, totalizando nove variáveis
-disponíveis \cite{casio2004}. Cada variável armazena um único valor
-numérico e pode ser acessada individualmente, o que as torna adequadas para
-guardar constantes ou resultados intermediários que serão reutilizados em
-diferentes etapas de um mesmo cálculo \cite{casio2004}.
+Além da memória independente, a Casio FX-82MS disponibiliza oito variáveis de armazenamento identificadas pelas letras A, B, C, D, E, F, X e Y, além da variável M, compartilhada com a memória independente, totalizando nove variáveis disponíveis \cite{casio2004}. Cada variável armazena um único valor numérico e pode ser acessada individualmente, o que as torna adequadas para guardar constantes ou resultados intermediários que serão reutilizados em diferentes etapas de um mesmo cálculo \cite{casio2004}.
 
-O armazenamento de um valor em uma variável é feito com a tecla \textbf{STO},
-seguida da tecla correspondente à variável desejada. A recuperação do valor
-armazenado é feita com a tecla \textbf{RCL}, também seguida da tecla da variável.
-As letras A a F e M estão indicadas em vermelho acima de teclas específicas e são
-acessadas por meio da tecla \textbf{ALPHA} \cite{casio2004}:
+O armazenamento de um valor em uma variável é feito com a tecla STO, seguida da tecla correspondente à variável desejada. A recuperação do valor armazenado é feita com a tecla RCL, também seguida da tecla da variável. As letras A a F e M estão indicadas em vermelho acima de teclas específicas e são acessadas por meio da tecla ALPHA \cite{casio2004}:
 
 \begin{itemize}
-    \item \textbf{STO} $\to$ \textbf{ALPHA} $\to$ \textit{tecla da variável} -- armazena o valor atual na variável indicada;
-    \item \textbf{RCL} $\to$ \textbf{ALPHA} $\to$ \textit{tecla da variável} -- recupera o valor armazenado na variável indicada.
+    \item \textbf{STO} $\to$ \textbf{ALPHA} $\to$ \textit{tecla da variável}: armazena o valor atual na variável indicada;
+    \item \textbf{RCL} $\to$ \textbf{ALPHA} $\to$ \textit{tecla da variável}: recupera o valor armazenado na variável indicada.
 \end{itemize}
 
-O conteúdo de cada variável permanece armazenado após pressionar \textbf{AC}
-ou desligar a calculadora. Para limpar todas as variáveis simultaneamente,
-utilize \textbf{SHIFT} $\to$ \textbf{CLR} $\to$ \textbf{1} (Mcl). A
-reinicialização completa por meio de \textbf{SHIFT} $\to$ \textbf{CLR} $\to$
-\textbf{3} (All) também apaga o conteúdo de todas as variáveis
-\cite{casio2004}.
+O conteúdo de cada variável permanece armazenado após pressionar AC ou desligar a calculadora. Para limpar todas as variáveis simultaneamente, utilize SHIFT $\to$ CLR $\to$ 1 (Mcl). A reinicialização completa por meio de SHIFT $\to$ CLR $\to$ 3 (All) também apaga o conteúdo de todas as variáveis \cite{casio2004}.
 
-Um uso típico das variáveis é o armazenamento da média de um conjunto de dados
-para reutilização no cálculo dos desvios individuais, evitando redigitar o valor
-a cada etapa. Considere as notas 5, 7 e 9, cuja média é $\bar{x} = 7$:
+Um uso típico das variáveis é o armazenamento da média de um conjunto de dados para reutilização no cálculo dos desvios individuais, evitando redigitar o valor a cada etapa. Considere as notas 5, 7 e 9, cuja média é $\bar{x} = 7$:
 
 \begin{table}[H]
     \centering
-        \begin{tabular}{lll}
+        \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
             Calcular a média & \texttt{( 5 + 7 + 9 ) / 3 =} & 7 \\
@@ -95,46 +60,27 @@ a cada etapa. Considere as notas 5, 7 e 9, cuja média é $\bar{x} = 7$:
         \end{tabular}
 \end{table}
 
-É importante distinguir o papel da variável \textbf{M} do papel da memória
-independente, embora compartilhem o mesmo espaço de armazenamento: ao utilizar
-\textbf{M+} ou \textbf{M$-$}, o valor em M é acumulado; ao utilizar
-\textbf{STO} $\to$ \textbf{M}, o valor atual \emph{substitui} o conteúdo
-anterior de M, sem acumulação. Essa distinção é relevante para evitar
-comportamentos inesperados quando as duas formas de acesso à memória M são
-combinadas em um mesmo cálculo \cite{casio2004}.
+É importante distinguir o papel da variável M do papel da memória independente, embora compartilhem o mesmo espaço de armazenamento: ao utilizar M+ ou M$-$, o valor em M é acumulado; ao utilizar STO $\to$ M, o valor atual substitui o conteúdo anterior de M, sem acumulação. Essa distinção é relevante para evitar comportamentos inesperados quando as duas formas de acesso à memória M são combinadas em um mesmo cálculo \cite{casio2004}.
 
-\subsection{Uso Estratégico em Cálculos Estatísticos}
+\section{Uso Estratégico em Cálculos Estatísticos}
 
-A combinação entre a memória independente e as variáveis de armazenamento
-permite estruturar cálculos estatísticos de forma organizada e sem retrabalho.
-Uma estratégia eficiente consiste em armazenar valores fixos, como a média ou
-um denominador comum, nas variáveis A a F, enquanto a memória M acumula
-somas parciais ao longo das etapas \cite{casio2004}.
+A combinação entre a memória independente e as variáveis de armazenamento permite estruturar cálculos estatísticos de forma organizada e sem retrabalho. Uma estratégia eficiente consiste em armazenar valores fixos, como a média ou um denominador comum, nas variáveis A a F, enquanto a memória M acumula somas parciais ao longo das etapas \cite{casio2004}.
 
-Essa abordagem é especialmente útil no cálculo da variância e do desvio padrão,
-em que o mesmo valor da média é subtraído repetidamente de cada dado do
-conjunto. Ao armazenar a média em uma variável antes de iniciar os cálculos dos
-desvios, evita-se a redigitação do valor a cada etapa, reduzindo o risco de erro.
+Essa abordagem é especialmente útil no cálculo da variância e do desvio padrão, em que o mesmo valor da média é subtraído repetidamente de cada dado do conjunto. Ao armazenar a média em uma variável antes de iniciar os cálculos dos, evita-se a redigitação do valor a cada etapa, reduzindo o risco de erro.
 
-Ao final de uma sequência de cálculos que envolva M+, recomenda-se recuperar
-o valor acumulado com \textbf{RCL M+} antes de prosseguir com as operações
-seguintes. Quando o mesmo cálculo envolver tanto \textbf{STO M} quanto
-\textbf{M+}, é importante ter clareza sobre qual operação está sendo utilizada
-em cada etapa, uma vez que o comportamento de acumulação e de substituição
-diferem, conforme descrito na seção anterior.
+Ao final de uma sequência de cálculos que envolva M+, recomenda-se recuperar o valor acumulado com RCL M+ antes de prosseguir com as operações seguintes. Quando o mesmo cálculo envolver tanto STO M quanto M+, é importante ter clareza sobre qual operação está sendo utilizada em cada etapa, uma vez que o comportamento de acumulação e de substituição diferem, conforme descrito na seção anterior.
 
-\subsection{Exemplos Práticos}
+\section{Exemplos Práticos}
 
-Os exemplos a seguir combinam o uso das variáveis de armazenamento e da
-memória independente para resolver problemas completos.
+Os exemplos a seguir combinam o uso das variáveis de armazenamento e da memória independente para resolver problemas completos.
 
-\subsubsection*{Exemplo 1 -- Desvio padrão amostral}
+\subsection*{Exemplo 1 - Desvio padrão amostral}
 
 Dado o conjunto de valores \{4, 7, 7, 10\}, calcule o desvio padrão amostral $s$. A média é $\bar{x} = (4 + 7 + 7 + 10)/4 = 7$. Armazena-se a média na variável A e acumulam-se os quadrados dos desvios na memória M:
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{lll}
+    \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
             Calcular a média & \texttt{( 4 + 7 + 7 + 10 ) / 4 =} & 7 \\
@@ -150,7 +96,7 @@ Dado o conjunto de valores \{4, 7, 7, 10\}, calcule o desvio padrão amostral $s
     \end{tabular}
 \end{table}
 
-\subsubsection*{Exemplo 2 -- Média ponderada} 
+\subsection*{Exemplo 2 - Média ponderada} 
 
 Um aluno obteve as notas 6,0, 8,0 e 5,0 nas provas P1, P2 e P3, com pesos 2, 3 e 5, respectivamente. Calcule a média ponderada $\bar{x}$.
 
@@ -158,7 +104,7 @@ Armazena-se o denominador (soma dos pesos) na variável B e acumula-se o numerad
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{lll}
+    \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
             Armazenar soma dos pesos & \texttt{( 2 + 3 + 5 ) = STO ALPHA B} & 10 \\

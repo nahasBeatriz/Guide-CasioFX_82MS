@@ -1,26 +1,19 @@
-\section{Potências e Raízes}
+\chapter{Potências e Raízes}
 
-Potências e raízes são operações frequentes e aparecem em 
-fórmulas de desvio padrão e variância. A FX-82MS oferece teclas dedicadas 
-para as formas mais comuns dessas operações, e todas assumem que a 
-calculadora está no modo \textbf{COMP} \cite{casio2004}.
+Potências e raízes são operações frequentes e aparecem em fórmulas de desvio padrão e variância. A Casio FX-82MS oferece teclas dedicadas para as formas mais comuns dessas operações, e todas assumem que a calculadora está no modo COMP \cite{casio2004}.
 
-\subsection{Quadrado e Cubo}
+\section{Quadrado e Cubo}
 
-Para elevar um número ao quadrado, utilize a tecla \textbf{$x^2$}, 
-localizada no painel central do teclado. Para elevar ao cubo, pressione 
-\textbf{SHIFT} seguido de \textbf{$x^2$}, acessando a função secundária 
-\textbf{$x^3$}. Ambas as funções são aplicadas ao valor imediatamente 
-anterior ao cursor \cite{casio2004}.
+Para elevar um número ao quadrado, utilize a tecla \textbf{$x^2$}, localizada no painel central do teclado. Para elevar ao cubo, pressione SHIFT seguido de \textbf{$x^2$}, acessando a função secundária \textbf{$x^3$}. Ambas as funções são aplicadas ao valor imediatamente anterior ao cursor \cite{casio2004}.
 
 Um exemplo de aplicação é o cálculo da variância amostral, que envolve elevar desvios ao quadrado:
 
-\begin{equation}
+\[
     s^2 = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + (x_3 - \bar{x})^2}{n-1}
-\end{equation}
+\]
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline
@@ -30,14 +23,12 @@ Um exemplo de aplicação é o cálculo da variância amostral, que envolve elev
 \end{tabular}
 \end{center}
 
-\subsection{Potência de Expoente Qualquer}
+\section{Potência de Expoente Qualquer}
 
-Para calcular uma potência com expoente arbitrário, utilize a tecla
-\textbf{$\wedge$}. A sintaxe é: digite a base, pressione a tecla, digite
-o expoente e confirme com \textbf{=} \cite{casio2004}.
+Para calcular uma potência com expoente arbitrário, utilize a tecla \textbf{$\wedge$}. A sintaxe é: digite a base, pressione a tecla, digite o expoente e confirme com \textbf{=}.
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline
@@ -48,26 +39,31 @@ o expoente e confirme com \textbf{=} \cite{casio2004}.
 \end{tabular}
 \end{center}
 
-Atenção: ao calcular potências de bases negativas, utilize parênteses ao
-redor da base para garantir que o sinal negativo seja incluído
-corretamente na operação. Sem os parênteses, a calculadora pode
-interpretar a expressão de forma distinta do esperado \cite{casio2004}.
+Atenção: ao calcular potências de bases negativas, utilize parênteses ao redor da base para garantir que o sinal negativo seja incluído na operação. Sem os parênteses, a calculadora eleva apenas o valor numérico e aplica o sinal negativo ao resultado final, gerando erros em expoentes pares:
 
-\subsection{Raiz Quadrada e Cúbica}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
+    \hline
+    $-2^4$ & \texttt{(-) 2 \^{} 4 =} & \texttt{-16} \\
+    $(-2)^4$ & \texttt{( (-) 2 ) \^{} 4 =} & \texttt{16} \\
+    \hline
+\end{tabular}
+\end{center}
 
-A raiz quadrada é acessada diretamente pela tecla 
-\textbf{$\sqrt{\phantom{x}}$}, que precede o radicando. A raiz cúbica é 
-acessada via \textbf{SHIFT} seguido da tecla de raiz quadrada, ativando 
-a função \textbf{$\sqrt[3]{\phantom{x}}$} \cite{casio2004}.
+\section{Raiz Quadrada e Cúbica}
+
+A raiz quadrada é acessada diretamente pela tecla \textbf{$\sqrt{\phantom{x}}$}, que precede o radicando. A raiz cúbica é acessada via SHIFT seguido da tecla de raiz quadrada, ativando a função \textbf{$\sqrt[3]{\phantom{x}}$}.
 
 O desvio padrão amostral envolve o cálculo de uma raiz quadrada:
 
-\begin{equation}
+\[
     s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}
-\end{equation}
+\]
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline
@@ -78,19 +74,16 @@ O desvio padrão amostral envolve o cálculo de uma raiz quadrada:
 \end{tabular}
 \end{center}
 
-\subsection{Raiz de Índice Qualquer}
+\section{Raiz de Índice Qualquer}
 
-Para raízes de índice arbitrário, utilize a função \textbf{$x^{1/y}$}, 
-acessada via \textbf{SHIFT} seguido da tecla \textbf{$\wedge$}. A sintaxe 
-é: digite o índice da raiz, pressione \textbf{SHIFT} e a tecla, depois 
-digite o radicando e confirme com \textbf{=} \cite{casio2004}.
+Para raízes de índice arbitrário, utilize a função \textbf{$x^{1/y}$}, acessada via SHIFT seguido da tecla \textbf{$\wedge$}. A sintaxe é: digite o índice da raiz, pressione SHIFT e a tecla, depois digite o radicando e confirme com \textbf{=}.
 
-\begin{equation}
+\[
     \sqrt[y]{x} = x^{1/y}
-\end{equation}
+\]
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline
@@ -104,18 +97,18 @@ Ressalta-se que raízes de índice par aplicadas a radicandos negativos
 resultam em erro no domínio real (\texttt{Math ERROR}), pois a FX-82MS 
 não opera com números complexos \cite{casio2004}.
 
-\subsection{Combinação Simples}
+\section{Combinação Simples}
 
-O cálculo de combinações simples é utilizado na determinação do número de agrupamentos não ordenados de $k$ elementos escolhidos a partir de um total de $n$ elementos. A FX-82MS dispõe da tecla dedicada \textbf{nCr} para realizar esse cálculo diretamente, sem a necessidade de expandir os fatoriais da fórmula \cite{casio2004}:
+O cálculo de combinações simples é utilizado na determinação do número de agrupamentos não ordenados de $k$ elementos escolhidos a partir de um total de $n$ elementos. A Casio FX-82MS dispõe da tecla dedicada nCr para realizar esse cálculo diretamente, sem a necessidade de expandir os fatoriais da fórmula:
 
-\begin{equation}
+\[
     \binom{n}{k} = C_{n,k} = \frac{n!}{k!(n-k)!}
-\end{equation}
+\]
 
-A sintaxe de entrada na calculadora é: digite o valor total de elementos ($n$), pressione a tecla \textbf{nCr}, digite a quantidade de elementos agrupados ($k$) e confirme com \textbf{=} \cite{casio2004}.
+A sintaxe de entrada na calculadora é: digite o valor total de elementos ($n$), pressione a tecla nCr, digite a quantidade de elementos agrupados ($k$) e confirme com \textbf{=}.
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline
@@ -125,35 +118,28 @@ A sintaxe de entrada na calculadora é: digite o valor total de elementos ($n$),
 \end{tabular}
 \end{center}
 
-Essa função constitui o elemento central para a resolução de problemas baseados na \textbf{Distribuição Binomial} no modo \textbf{COMP}, na qual a probabilidade de obter $k$ sucessos em $n$ ensaios independentes é dada por:
+Essa função constitui o elemento central para a resolução de problemas baseados na Distribuição Binomial no modo COMP, na qual a probabilidade de obter $k$ sucessos em $n$ ensaios independentes é dada por:
 
-\begin{equation}
+\[
     P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}
-\end{equation}
+\]
 
-\subsection{Números Negativos e Domínio das Operações}
+\section{Números Negativos e Domínio das Operações}
 
-A FX-82MS opera exclusivamente no domínio dos números reais, o que impõe
-restrições a certas combinações de base, expoente e radicando
-\cite{casio2004}. Quando uma operação resulta em valor fora desse domínio,
-a calculadora exibe \texttt{Math ERROR} e interrompe o cálculo.
+A Casio FX-82MS opera exclusivamente no domínio dos números reais, o que impõe restrições a certas combinações de base, expoente e radicando \cite{casio2004}. Quando uma operação resulta em valor fora desse domínio, a calculadora exibe \texttt{Math ERROR} e interrompe o cálculo.
 
 As situações mais comuns que produzem esse erro são \cite{casio2004}:
 
 \begin{itemize}
-    \item \textbf{Raiz de índice par com radicando negativo} -- por exemplo,
-    $\sqrt{-4}$ ou $\sqrt[4]{-16}$, cujos resultados são imaginários;
-    \item \textbf{Potência de base negativa com expoente fracionário} --
-    por exemplo, $(-8)^{0{,}5}$, equivalente a $\sqrt{-8}$ no reais;
-    \item \textbf{Raiz de índice par com expoente fracionário não simplificável}
-    -- casos em que a calculadora não consegue determinar um resultado real.
+    \item \textbf{Raiz de índice par com radicando negativo}: por exemplo, $\sqrt{-4}$ ou $\sqrt[4]{-16}$, cujos resultados são imaginários;
+    \item \textbf{Potência de base negativa com expoente fracionário}: por exemplo, $(-8)^{0{,}5}$, equivalente a $\sqrt{-8}$ no reais;
+    \item \textbf{Raiz de índice par com expoente fracionário não simplificável}: casos em que a calculadora não consegue determinar um resultado real.
 \end{itemize}
 
-Raízes de índice \emph{ímpar} aplicadas a radicandos negativos, por outro
-lado, são válidas no domínio real e calculadas corretamente:
+Raízes de índice ímpar aplicadas a radicandos negativos, por outro lado, são válidas no domínio real e calculadas corretamente:
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Expressão} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline
@@ -165,29 +151,24 @@ lado, são válidas no domínio real e calculadas corretamente:
 \end{tabular}
 \end{center}
 
-Ao encontrar \texttt{Math ERROR}, pressione \textbf{AC} para limpar o
-visor e revisar a expressão antes de recalcular.
+Ao encontrar \texttt{Math ERROR}, pressione AC para limpar o visor e revisar a expressão antes de recalcular.
 
-\subsection{Exemplos Práticos}
+\section{Exemplos Práticos}
 
-Esta subseção apresenta aplicações de potências e raízes com
-exemplos contextualizados em Probabilidade e Estatística.
+Esta subseção apresenta aplicações de potências e raízes com exemplos contextualizados em Probabilidade e Estatística.
 
-\subsubsection*{Exemplo 1 — Desvio padrão amostral}
+\subsection*{Exemplo 1 - Desvio padrão amostral}
 
-Dadas as notas $6$, $8$ e $10$, com média $\bar{x} = 8$, o desvio padrão
-amostral é:
+Dadas as notas $6$, $8$ e $10$, com média $\bar{x} = 8$, o desvio padrão amostral é:
 
-\begin{equation}
-    s = \sqrt{\frac{(6-8)^2 + (8-8)^2 + (10-8)^2}{3-1}}
-      = \sqrt{\frac{4 + 0 + 4}{2}} = \sqrt{4} = 2
-\end{equation}
+\[
+    s = \sqrt{\frac{(6-8)^2 + (8-8)^2 + (10-8)^2}{3-1}} = \sqrt{\frac{4 + 0 + 4}{2}} = \sqrt{4} = 2
+\]
 
-O cálculo é realizado em etapas, aproveitando a memória \textbf{Ans}
-para encadear os resultados intermediários:
+O cálculo é realizado em etapas, aproveitando a memória Ans para encadear os resultados intermediários:
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline
@@ -198,20 +179,16 @@ para encadear os resultados intermediários:
 \end{tabular}
 \end{center}
 
-\subsubsection*{Exemplo 2 — Variância populacional}
+\subsection*{Exemplo 2 - Variância populacional}
 
-Uma pesquisa registrou os seguintes tempos de atendimento em minutos:
-$2$, $4$, $4$, $4$, $5$, $5$, $7$ e $9$. A média é $\bar{x} = 5$ e
-a variância populacional é:
+Uma pesquisa registrou os seguintes tempos de atendimento em minutos: $2$, $4$, $4$, $4$, $5$, $5$, $7$ e $9$. A média é $\bar{x} = 5$ e a variância populacional é:
 
-\begin{equation}
-    s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n}
-             = \frac{9 + 1 + 1 + 1 + 0 + 0 + 4 + 16}{8}
-             = \frac{32}{8} = 4
-\end{equation}
+\[
+    s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n} = \frac{9 + 1 + 1 + 1 + 0 + 0 + 4 + 16}{8} = \frac{32}{8} = 4
+\]
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline
@@ -225,15 +202,13 @@ a variância populacional é:
 \end{tabular}
 \end{center}
 
-\subsubsection*{Exemplo 3 — Coeficiente de variação}
+\subsection*{Exemplo 3 - Coeficiente de variação}
 
-O coeficiente de variação ($CV$) expressa o desvio padrão como percentual
-da média, permitindo comparar a dispersão de conjuntos com unidades ou
-magnitudes diferentes:
+O coeficiente de variação ($CV$) expressa o desvio padrão como percentual da média, permitindo comparar a dispersão de conjuntos com unidades ou magnitudes diferentes:
 
-\begin{equation}
+\[
     CV = \frac{s}{\bar{x}} \times 100
-\end{equation}
+\]
 
 Considere duas turmas com os seguintes resultados em uma avaliação:
 
@@ -243,7 +218,7 @@ Considere duas turmas com os seguintes resultados em uma avaliação:
 \end{itemize}
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{|c|c|c|}
     \hline
     \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\
     \hline

@@ -1,38 +1,47 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, a4paper, openany]{book}
 
-\usepackage{sbc-template}
-\usepackage{graphicx}
-\usepackage[brazilian]{babel}
+\usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage[margin=0pt]{geometry}
+\usepackage{graphicx}
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage{indentfirst}
 \usepackage{amsmath}
+\usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{imakeidx}
+\usepackage{tcolorbox}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage[alf]{abntex2cite}
 
-\sloppy
+\onehalfspacing
+\makeindex[options=-s makeindex.ist]
 
-\title{Manual de Uso Básico da Calculadora Científica Casio FX-82MS}
-
-\author{Beatriz Regina Nahas¹}
-\address{Instituto Federal do Paraná -- Campus Pinhais
-\email{beatriz.nahas@gmail.com}}
+\title{\textbf{Guia de Uso Básico da Calculadora Científica Casio FX-82MS}}
+\author{Beatriz Regina Nahas}
+\date{Última atualização em \today}
 
 \begin{document}
 
-\maketitle
+\frontmatter
 
-\begin{resumo}
-    Este manual apresenta as principais funções da calculadora científica Casio FX-82MS 
-    voltadas ao estudo de Estatística, com foco em estudantes recém-ingressados 
-    em cursos da área de Tecnologia da Informação. O objetivo é promover a autonomia no uso da 
-    ferramenta como recurso de apoio à resolução e à interpretação de problemas estatísticos,
-    abordando desde operações aritméticas básicas e potências até recursos de memória, 
-    cálculos estatísticos e resolução de erros comuns. Os exemplos apresentados são 
-    contextualizados com conteúdos da disciplina de Probabilidade e Estatística do curso de
-    Bacharelado em Ciência da Computação do Instituto Federal do Paraná (IFPR) -- Campus Pinhais.
-\end{resumo}
+\thispagestyle{empty}
+\newpage
+
+\newgeometry{left=3cm, right=2cm, top=3cm, bottom=2cm}
+
+\maketitle
+\tableofcontents
+
+\input{chap/Resumo}
+
+\mainmatter 
 
 \input{chap/1.Introducao}
 \input{chap/2.ConhecendoCalculadora}
@@ -44,7 +53,10 @@
 \input{chap/8.Erros}
 \input{chap/9.Exemplos}
 
-\bibliographystyle{sbc}
+\printindex
+
+\newpage
+\bibliographystyle{abntex2-alf}
 \bibliography{referencias}
 
-\end{document} 
+\end{document}

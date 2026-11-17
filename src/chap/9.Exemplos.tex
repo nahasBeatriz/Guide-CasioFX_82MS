@@ -1,12 +1,12 @@
-\section{Exemplos Integrados}
+\chapter{Exemplos Integrados}
 
-Esta seção apresenta exercícios resolvidos do livro \textit{Estatística Fácil}, desenvolvidos passo a passo.
+Esta seção apresenta exercícios resolvidos presentes na referêcnia \cite{crespo2009}, desenvolvidos passo a passo.
 
-\subsection{Distribuição Binomial}
+\section{Distribuição Binomial}
 
 Um teste de múltipla escolha contém 6 questões, cada uma com 4 alternativas e apenas uma correta ($p = 0{,}25$). Se um candidato responder a todas as questões de forma aleatória (chute), determine a probabilidade de ele acertar exatamente 2 questões.
 
-\subsubsection*{Resolução Manual}
+\subsection*{Resolução Manual}
 
 A probabilidade de obter $k$ sucessos em $n$ ensaios independentes em uma Distribuição Binomial é dada por:
 \[
@@ -34,13 +34,13 @@ P(X = 2) = 15 \cdot (0{,}25)^2 \cdot (0{,}75)^{6-2}
 P(X = 2) = 15 \cdot 0{,}0625 \cdot (0{,}75)^4 = 15 \cdot 0{,}0625 \cdot 0{,}31640625 \approx 0{,}2966
 \]
 
-\subsubsection*{Resolução na Calculadora}
+\subsection*{Resolução na Calculadora}
 
-O cálculo direto de probabilidades binomiais é realizado no modo de cálculo geral \textbf{COMP} (\texttt{MODE 1}), utilizando a tecla dedicada \textbf{nCr} para a combinação e a tecla \textbf{$\wedge$} para as potências.
+O cálculo direto de probabilidades binomiais é realizado no modo de cálculo geral COMP (MODE 1), utilizando a tecla dedicada nCr para a combinação e a tecla \textbf{$\wedge$} para as potências.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{p{4.5cm} p{5.5cm} p{3cm}}
+    \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
         Ativar modo COMP & \texttt{MODE 1} & \textit{Modo Geral} \\
@@ -51,11 +51,11 @@ O cálculo direto de probabilidades binomiais é realizado no modo de cálculo g
 
 A probabilidade de o candidato acertar exatamente duas questões chutando é de aproximadamente $29{,}66\%$.
 
-\subsection{Variância e Desvio Padrão Amostral}
+\section{Variância e Desvio Padrão Amostral}
 
 Considerando a amostra das estaturas (em centímetros) de 5 estudantes: $\{160, 165, 170, 172, 178\}$, determine a variância amostral ($s^2$) e o desvio padrão amostral ($s$).
 
-\subsubsection*{Resolução Manual}
+\subsection*{Resolução Manual}
 
 1. Cálculo da média aritmética ($\bar{x}$):
 \[
@@ -84,13 +84,13 @@ s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1} = \frac{188}{5 - 1} = \frac{188}{4} =
 s = \sqrt{s^2} = \sqrt{47} \approx 6{,}8556 \text{ cm}
 \]
 
-\subsubsection*{Resolução na Calculadora}
+\subsection*{Resolução na Calculadora}
 
-Utiliza-se o modo estatístico de uma variável \textbf{SD} (\texttt{MODE 2}).
+Utiliza-se o modo estatístico de uma variável SD (MODE 2).
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{p{4.5cm} p{5.5cm} p{3cm}}
+    \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
         Ativar modo SD & \texttt{MODE 2} & \texttt{SD} \\
@@ -102,13 +102,13 @@ Utiliza-se o modo estatístico de uma variável \textbf{SD} (\texttt{MODE 2}).
     \end{tabular}
 \end{table}
 
-\subsection{Média e Desvio Padrão com Tabela de Frequências}
+\section{Média e Desvio Padrão com Tabela de Frequências}
 
 A tabela a seguir apresenta a distribuição do número de acertos de 20 candidatos em um teste de conhecimento:
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{cc}
+    \begin{tabular}{|c|c|}
         \hline
         \textbf{Número de Acertos ($x_i$)} & \textbf{Frequência ($f_i$)} \\ \hline
         2 & 2 \\
@@ -122,7 +122,7 @@ A tabela a seguir apresenta a distribuição do número de acertos de 20 candida
 
 Com base na tabela de frequências apresentada, calcule a média aritmética ($\bar{x}$) e o desvio padrão da distribuição.
 
-\subsubsection*{Resolução Manual}
+\subsection*{Resolução Manual}
 
 Como os dados representam o total de candidatos do teste, aplica-se a fórmula populacional para o desvio padrão.
 
@@ -130,7 +130,7 @@ Como os dados representam o total de candidatos do teste, aplica-se a fórmula p
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{ccccc}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
         $x_i$ & $f_i$ & $f_i x_i$ & $x_i^2$ & $f_i x_i^2$ \\ \hline
         2  & 2  & 4   & 4   & 8   \\
@@ -138,7 +138,7 @@ Como os dados representam o total de candidatos do teste, aplica-se a fórmula p
         6  & 8  & 48  & 36  & 288 \\
         8  & 3  & 24  & 64  & 192 \\
         10 & 2  & 20  & 100 & 200 \\ \hline
-        \textbf{Total} & \textbf{20} & \textbf{116} & -- & \textbf{768} \\ \hline
+        Total & 20 & 116 & - & 768 \\ \hline
     \end{tabular}
 \end{table}
 
@@ -155,13 +155,13 @@ s = \sqrt{\frac{\sum f_i x_i^2}{n} - \bar{x}^2} = \sqrt{\frac{768}{20} - (5{,}8)
 s= \sqrt{38{,}4 - 33{,}64} = \sqrt{4{,}76} \approx 2{,}1817
 \]
 
-\subsubsection*{Resolução na Calculadora}
+\subsection*{Resolução na Calculadora}
 
-No modo \textbf{SD} (\texttt{MODE 2}), os dados agrupados por frequência são digitados utilizando o separador \texttt{;} (obtido por \texttt{SHIFT ,}).
+No modo SD (MODE 2), os dados agrupados por frequência são digitados utilizando o separador "\texttt{;}" (obtido por SHIFT ,).
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{p{4.5cm} p{5.5cm} p{3cm}}
+    \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
         Ativar modo SD & \texttt{MODE 2} & \texttt{SD} \\
@@ -176,13 +176,13 @@ No modo \textbf{SD} (\texttt{MODE 2}), os dados agrupados por frequência são d
     \end{tabular}
 \end{table}
 
-\subsection{Regressão Linear Simples}
+\section{Regressão Linear Simples}
 
 Para estudar a relação entre os gastos em publicidade ($x$, em milhares de reais) e o volume de vendas ($y$, em milhares de reais) de uma empresa, foram coletados os seguintes pares de dados referentes a 5 meses:
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{cc}
+    \begin{tabular}{|c|c|}
         \hline
         \textbf{Publicidade ($x$)} & \textbf{Vendas ($y$)} \\ \hline
         2 & 4 \\
@@ -194,15 +194,15 @@ Para estudar a relação entre os gastos em publicidade ($x$, em milhares de rea
     \label{tab:regressao_exemplo}
 \end{table}
 
-Obtenha a equação da reta de regressão linear simples ($\hat{y} = A + Bx$) e o coeficiente de correlação linear ($r$).
+Obtenha a equação da reta de regressão linear simples ($\hat{Y} = A + Bx$) e o coeficiente de correlação linear ($r$).
 
-\subsubsection*{Resolução Manual}
+\subsection*{Resolução Manual}
 
 1. Tabela auxiliar para os somatórios de regressão ($n = 5$):
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{ccccc}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
         $x_i$ & $y_i$ & $x_i^2$ & $y_i^2$ & $x_i y_i$ \\ \hline
         2 & 4 & 4  & 16 & 8   \\
@@ -210,7 +210,7 @@ Obtenha a equação da reta de regressão linear simples ($\hat{y} = A + Bx$) e 
         5 & 7 & 25 & 49 & 35  \\
         6 & 8 & 36 & 64 & 48  \\
         8 & 9 & 64 & 81 & 72  \\ \hline
-        \textbf{24} & \textbf{33} & \textbf{138} & \textbf{235} & \textbf{178} \\ \hline
+        24 & 33 & 138 & 235 & 178 \\ \hline
     \end{tabular}
 \end{table}
 
@@ -232,7 +232,7 @@ A = \bar{y} - B \bar{x} = 6{,}6 - (0{,}8596 \cdot 4{,}8) = 6{,}6 - 4{,}1261 = 2{
 
 A equação da reta de regressão é:
 \[
-\hat{y} = 2{,}4739 + 0{,}8596x
+\hat{Y} = 2{,}4739 + 0{,}8596x
 \]
 
 4. Cálculo do coeficiente de correlação linear ($r$):
@@ -248,13 +248,13 @@ r = \frac{98}{\sqrt{9804}} = \frac{98}{99{,}0151} \approx 0{,}9897
 
 O valor $r \approx 0{,}9897$ indica uma correlação linear positiva muito forte entre o investimento em publicidade e o volume de vendas.
 
-\subsubsection*{Resolução na Calculadora}
+\subsection*{Resolução na Calculadora}
 
-A análise de regressão linear exige a ativação do modo \textbf{REG LIN} (\texttt{MODE 3 1}). Os pares de dados $(x, y)$ são informados separando as variáveis por vírgula \texttt{,} e confirmados com \texttt{DT}.
+A análise de regressão linear exige a ativação do modo REG LIN (MODE 3 1). Os pares de dados $(x, y)$ são informados separando as variáveis por vírgula "\texttt{,}" e confirmados com DT.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{p{4.5cm} p{5.5cm} p{3cm}}
+    \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Etapa} & \textbf{Entrada} & \textbf{Resultado} \\ \hline
         Ativar Modo REG LIN & \texttt{MODE 3 1} & \texttt{REG} \\
