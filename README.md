@@ -6,7 +6,7 @@ Este repositório contém o código-fonte em LaTeX e o PDF final compilado do **
 
 Você pode baixar a versão pronta para leitura diretamente no link abaixo:
 
-*  **pdf/Guia_Calculadora_FX82MS.pdf**
+ [Guia_Calculadora_FX82MS](https://github.com/nahasBeatriz/Guide-CasioFX_82MS/raw/main/pdf/Guia_Calculadora_FX82MS.pdf)
 
 ## Conteúdo do Guia
 
